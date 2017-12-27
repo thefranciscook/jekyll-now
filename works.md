@@ -1,5 +1,8 @@
 ---
-layout: default
+layout: page
+title: Projects
+permalink: /works
+published: true
 ---
 
 <div class="posts">
