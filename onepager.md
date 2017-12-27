@@ -1,4 +1,4 @@
->  A design strategist working in the intersection of **design**, **technology** and **business**. 10 years experience. Based in Toronto.
+>  *Product and service designer* based in Toronto. Working in the intersection of **design**, **technology** and **business** for the last 10 years.
 
 ## Project highlights
 
@@ -7,7 +7,7 @@
 * Innovation workshop series for LogMeIn
 * Digital transformation of T-Mobile Hungary's bill payment services
 
-<!---[More works →]({{ site.baseurl }}/works) just --> 
+[More projects →]({{ site.baseurl }}/works)
 
 ## Contact
 
