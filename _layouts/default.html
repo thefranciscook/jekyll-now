@@ -13,75 +13,41 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,700,400,800" rel="stylesheet">
 
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
     <style>
-      h1 {
-        text-transform: uppercase;
-        letter-spacing: .05em;
-      }
-
-      body {
-        font-size: 1em;
-        font-weight: 200;
-      }
-
-      blockquote {
-        font-size: 1.5em;
-        font-weight: 200;
-      }
-
-      h2 {
-        font-size: 1em;
-        font-weight: 200;
-        opacity: .5;
-        text-transform: uppercase;
-      }
-
-      html {
-         background: url(./images/background7.svg) no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-position: right top;
-      }
-      .avatar {
-        width: 70px;
-      }
-
-      .emoji {
-        font-size: 2em
-      }
-
-      section {
-        margin-top: 1.75em;
-      }
-
-      #social {
-        float: right;
-        margin-top: .6em;
-      }
-
-      .social {
-        width: 1.4em;
-        margin-right: .5em;
-        opacity: .5;
-        
-      }
-
-      #contact {
-        font-size: 1.2em;
-        margin-top: 1em;
-      }
-
+    #projects article img {
+      max-height: 100px;
+      max-width: 100px;
+    }
     </style>
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <style>
+        /*.slideshow {width:350px; height:300px; overflow:hidden; position:relative; }
+        .slideshow img{ position:absolute; animation:slideshow 8s infinite; opacity:0; width: 100%; height: auto;}
+
+        @keyframes slideshow {25%{opacity:1;} 40%{opacity:0;}} 
+        .slideshow img:nth-child(4){animation-delay:0s;}
+        .slideshow img:nth-child(3){animation-delay:2s;}
+        .slideshow img:nth-child(2){animation-delay:4s;}
+        .slideshow img:nth-child(1){animation-delay:6s;}*/
+
+        .slideshow {width:350px; height:300px; overflow:hidden; position:relative; }
+        .slideshow img{ position:absolute; animation:slideshow 8s infinite; opacity:0; width: 100%; height: auto;}
+
+        @keyframes slideshow {25%{opacity:1;} 40%{opacity:0;}} 
+        .slideshow img:nth-child(4){animation-delay:0s;}
+        .slideshow img:nth-child(3){animation-delay:2s;}
+        .slideshow img:nth-child(2){animation-delay:4s;}
+        .slideshow img:nth-child(1){animation-delay:6s;}
+    </style>
+
+
   </head>
 
   <body>
     
       <div id="main" role="main" class="container">
-        <!--{{ content }}-->
 
         <div id="social">
           <a href="http://www.linkedin.com/in/thefranciscook" target="_blank"><img class="social" src="./images/linkedin.svg"></img></a>
@@ -99,16 +65,45 @@
         </section>
 
         <section>
-          <h2>Project highlights</h2>
+          <h2>Highlights</h2>
 
           <ul>
             <li>Leading the redesign of Erste Bank Hungary's website</li>
             <li>Advising a startup disrupting last-mile delivery with VR</li>
-            <li>Innovation workshop series for LogMeIn</li>
-            <li>Digital transformation of T-Mobile Hungary's bill payment services</li>
+            <li>Running an innovation workshop series for LogMeIn</li>
+            <li>Multi-channel service design of T-Mobile Hungary's bill payment services</li>
           </ul>
 
           
+        </section>
+
+        <section id="projects">
+
+            TODO GRID
+            TODO 1 project per screen
+
+          <h2>Projects</h2>
+          <div class="posts">
+
+            {% for post in site.posts %}
+              <div id="{{post.url  | replace:'/',''}}-card"  class="project-card" >
+                
+                <div class="slideshow">
+                  {% for image in site.static_files %}
+                    {% if image.path contains post.url %}
+                     <img src="./{{image.path}} "/>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+
+                <div >
+                  <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                  <p class="entry">{{ post.excerpt }}</p>
+                </div>
+
+              </article>
+            {% endfor %}
+          </div>
         </section>
 
         
