@@ -16,15 +16,7 @@
     <style>
       h1 {
         text-transform: uppercase;
-      }
-
-      .content {
-        overflow-x: hidden;
-    position: relative;
-    z-index: 1;
-    padding: 2.5rem 2rem;
-    max-width: 100%;
-    width: 48rem;
+        letter-spacing: .05em;
       }
 
       body {
@@ -41,6 +33,7 @@
         font-size: 1em;
         font-weight: 200;
         opacity: .5;
+        text-transform: uppercase;
       }
 
       html {
@@ -49,6 +42,7 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        background-position: right top; 
       }
       .avatar {
         width: 70px;
@@ -58,30 +52,59 @@
         font-size: 2em
       }
 
+      section {
+        margin-top: 1.75em;
+      }
+
+      .social {
+        width: 1.5em;
+        margin-right: .75em;
+        opacity: .5;
+      }
+
     </style>
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="content">
-    <div>
-      <div class="container">
-        <header class="clearfix">
-          
-          <div >
-            <h1 ><a href="{{ site.baseurl }}/"> {{ site.name }}</a></h1>
-            <!--<p class="site-description">{{ site.description }}</p>-->
-          </div>
+    
+      <div id="main" role="main" class="container">
+        <!--{{ content }}-->
 
-        </header>
+        <h1>Francis Cook</h1>
+
+        <p>+1-647-558-4955 / hello@franciscook.com</p>
+
+        <blockquote>Product and service designer based in Toronto. Working in the intersection of <strong>design</strong>, <strong>technology</strong> and <strong>business</strong> for the last 10 years.</blockquote>
+
+        <section>
+          <h2>Project highlights</h2>
+
+          <ul>
+            <li>Leading the redesign of Erste Bank Hungary's website</li>
+            <li>Advising a startup disrupting last-mile delivery with VR</li>
+            <li>Innovation workshop series for LogMeIn</li>
+            <li>Digital transformation of T-Mobile Hungary's bill payment services</li>
+          </ul>
+
+          <a href="{{ site.baseurl }}/works">More ux and service design projects →</a>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+
+          <p>Phone: +1-647-558-4955<br/>
+          E-mail: hello@franciscook.com</p>
+        </section>
+
+        <section id="social">
+          <a href="http://www.linkedin.com/in/thefranciscook" target="_blank"><img class="social" src="./images/linkedin.svg"></img></a>
+          <a href="http://www.twitter.com/thefranciscook" target="_blank"><img class="social" src="./images/twitter.svg"></img></a>
+          <a href="http://www.instagram.com/thefranciscook" target="_blank"><img class="social" src="./images/instagram.svg"></img></a>
+          <a href="http://www.github.com/thefranciscook" target="_blank"><img class="social" src="./images/github.svg"></img></a>
+        </section>
       </div>
-    </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-    </div>
 
     {% include analytics.html %}
   </body>
