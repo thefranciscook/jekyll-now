@@ -56,10 +56,21 @@
         margin-top: 1.75em;
       }
 
+      #social {
+        float: right;
+        margin-top: .6em;
+      }
+
       .social {
-        width: 1.5em;
-        margin-right: .75em;
+        width: 1.4em;
+        margin-right: .5em;
         opacity: .5;
+        
+      }
+
+      #contact {
+        font-size: 1.2em;
+        margin-top: 1em;
       }
 
     </style>
@@ -72,11 +83,20 @@
       <div id="main" role="main" class="container">
         <!--{{ content }}-->
 
+        <div id="social">
+          <a href="http://www.linkedin.com/in/thefranciscook" target="_blank"><img class="social" src="./images/linkedin.svg"></img></a>
+          <a href="http://www.twitter.com/thefranciscook" target="_blank"><img class="social" src="./images/twitter.svg"></img></a>
+          <a href="http://www.instagram.com/thefranciscook" target="_blank"><img class="social" src="./images/instagram.svg"></img></a>
+          <a href="http://www.github.com/thefranciscook" target="_blank"><img class="social" src="./images/github.svg"></img></a>
+        </div>
+
         <h1>Francis Cook</h1>
 
-        <p>+1-647-558-4955 / hello@franciscook.com</p>
-
         <blockquote>Product and service designer based in Toronto. Working in the intersection of <strong>design</strong>, <strong>technology</strong> and <strong>business</strong> for the last 10 years.</blockquote>
+
+        <section id="contact">
+            <a href="tel:+1-647-558-4955">+1-647-558-4955</a>  /  <a href="mailto:hello@franciscook.com">hello@franciscook.com</a>
+        </section>
 
         <section>
           <h2>Project highlights</h2>
@@ -88,22 +108,10 @@
             <li>Digital transformation of T-Mobile Hungary's bill payment services</li>
           </ul>
 
-          <a href="{{ site.baseurl }}/works">More ux and service design projects →</a>
+          
         </section>
 
-        <section>
-          <h2>Contact</h2>
-
-          <p>Phone: +1-647-558-4955<br/>
-          E-mail: hello@franciscook.com</p>
-        </section>
-
-        <section id="social">
-          <a href="http://www.linkedin.com/in/thefranciscook" target="_blank"><img class="social" src="./images/linkedin.svg"></img></a>
-          <a href="http://www.twitter.com/thefranciscook" target="_blank"><img class="social" src="./images/twitter.svg"></img></a>
-          <a href="http://www.instagram.com/thefranciscook" target="_blank"><img class="social" src="./images/instagram.svg"></img></a>
-          <a href="http://www.github.com/thefranciscook" target="_blank"><img class="social" src="./images/github.svg"></img></a>
-        </section>
+        
       </div>
 
     {% include analytics.html %}
