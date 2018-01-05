@@ -32,7 +32,7 @@
         .slideshow img:nth-child(2){animation-delay:4s;}
         .slideshow img:nth-child(1){animation-delay:6s;}*/
 
-        .slideshow {width:350px; height:300px; overflow:hidden; position:relative; }
+        .slideshow {width:300px; height:150px; overflow:hidden; position:relative; }
         .slideshow img{ position:absolute; animation:slideshow 8s infinite; opacity:0; width: 100%; height: auto;}
 
         @keyframes slideshow {25%{opacity:1;} 40%{opacity:0;}} 
@@ -40,7 +40,15 @@
         .slideshow img:nth-child(3){animation-delay:2s;}
         .slideshow img:nth-child(2){animation-delay:4s;}
         .slideshow img:nth-child(1){animation-delay:6s;}
+
+        @media only screen and (min-width: 30em) {
+          .project-card { width: 50%; }
+          .main { width: 66.66%;}
+          .side { width: 33.33%;}
+        }
     </style>
+
+
 
 
   </head>
@@ -48,45 +56,47 @@
   <body>
     
       <div id="main" role="main" class="container">
-
-        <div id="social">
-          <a href="http://www.linkedin.com/in/thefranciscook" target="_blank"><img class="social" src="./images/linkedin.svg"></img></a>
-          <a href="http://www.twitter.com/thefranciscook" target="_blank"><img class="social" src="./images/twitter.svg"></img></a>
-          <a href="http://www.instagram.com/thefranciscook" target="_blank"><img class="social" src="./images/instagram.svg"></img></a>
-          <a href="http://www.github.com/thefranciscook" target="_blank"><img class="social" src="./images/github.svg"></img></a>
+        <div class="row">
+          <div class="col main">
+            <h1>Francis Cook</h1>
+          </div>
+          
+          <div class="col side" id="social">
+            <a href="http://www.linkedin.com/in/thefranciscook" target="_blank"><img class="social" src="./images/linkedin.svg"></img></a>
+            <a href="http://www.twitter.com/thefranciscook" target="_blank"><img class="social" src="./images/twitter.svg"></img></a>
+            <a href="http://www.instagram.com/thefranciscook" target="_blank"><img class="social" src="./images/instagram.svg"></img></a>
+            <a href="http://www.github.com/thefranciscook" target="_blank"><img class="social" src="./images/github.svg"></img></a>
+          </div>
         </div>
 
-        <h1>Francis Cook</h1>
+        <div class="row">
 
-        <blockquote>Product and service designer based in Toronto. Working in the intersection of <strong>design</strong>, <strong>technology</strong> and <strong>business</strong> for the last 10 years.</blockquote>
+          <blockquote>UX and Service Designer based in Toronto. Ten years in the intersection of <strong>design</strong>, <strong>technology</strong> and <strong>business</strong>.</blockquote>
 
-        <section id="contact">
-            <a href="tel:+1-647-558-4955">+1-647-558-4955</a>  /  <a href="mailto:hello@franciscook.com">hello@franciscook.com</a>
-        </section>
+          <div id="contact">
+              <a href="tel:+1-647-558-4955">+1-647-558-4955</a>  /  <a href="mailto:hello@franciscook.com">hello@franciscook.com</a>
+          </div>
 
-        <section>
-          <h2>Highlights</h2>
+          <div>
+            <h2>Highlights</h2>
 
-          <ul>
-            <li>Leading the redesign of Erste Bank Hungary's website</li>
-            <li>Advising a startup disrupting last-mile delivery with VR</li>
-            <li>Running an innovation workshop series for LogMeIn</li>
-            <li>Multi-channel service design of T-Mobile Hungary's bill payment services</li>
-          </ul>
+            <ul>
+              <li>Leading the redesign of Erste Bank Hungary's website</li>
+              <li>Advising a startup disrupting last-mile delivery with VR</li>
+              <li>Running an innovation workshop series for LogMeIn</li>
+              <li>Multi-channel service design of T-Mobile Hungary's bill payment services</li>
+            </ul>
 
-          
-        </section>
+            
+          </div>
+        </div>
 
-        <section id="projects">
+        <div class="row" id="projects">
 
-            TODO GRID
-            TODO 1 project per screen
-
-          <h2>Projects</h2>
-          <div class="posts">
+            <h2>Projects</h2>
 
             {% for post in site.posts %}
-              <div id="{{post.url  | replace:'/',''}}-card"  class="project-card" >
+              <div id="{{post.url  | replace:'/',''}}-card"  class="col project-card" >
                 
                 <div class="slideshow">
                   {% for image in site.static_files %}
@@ -95,16 +105,17 @@
                     {% endif %}
                   {% endfor %}
                 </div>
+              
 
                 <div >
                   <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
                   <p class="entry">{{ post.excerpt }}</p>
                 </div>
+                
 
-              </article>
+              </div>
             {% endfor %}
-          </div>
-        </section>
+        </div>
 
         
       </div>

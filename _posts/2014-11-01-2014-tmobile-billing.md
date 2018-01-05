@@ -1,7 +1,7 @@
 ---
 layout: post
 title: T-Mobile Billing Service Design
-excerpt: blah
+excerpt: 2014, service design
 ---
 
 # yo
