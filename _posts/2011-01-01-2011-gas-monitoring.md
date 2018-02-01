@@ -1,7 +1,7 @@
 ---
 layout: post
-title: T-Mobile Billing Service Design
-excerpt: Service Design (2014, Hungary)
+title: Gas distribution monitoring web application
+excerpt: User Experience Design (2011, Hungary)
 ---
 
 Lorem ipsum dolor amet pBR&B organic lyft forage bicycle rights. Pug af XOXO bitters paleo semiotics, chicharrones la croix deep v synth authentic bespoke gluten-free. Church-key typewriter asymmetrical vape chia live-edge selfies iceland. Trust fund pour-over tacos, chartreuse yuccie cred ramps austin. Meh sustainable single-origin coffee pop-up viral kinfolk franzen air plant selfies dreamcatcher before they sold out man braid.
