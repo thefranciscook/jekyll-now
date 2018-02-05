@@ -132,6 +132,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
             <h2>Projects</h2>
 
             {% for category in site.categories %}
+              
               <h3 name="{{ category | first }}">{{ category | first }}</h3>
 
               <div class="row">
@@ -155,6 +156,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
                   {% endfor %}
                 {% endfor %}
               </div>
+              
             {% endfor %}
           </div>
         </div>
