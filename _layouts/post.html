@@ -10,7 +10,7 @@ layout: page-default
   	<a class="tag" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
   {% endfor %}
   {% if page.cta!= null %}
-  	<a href="{{ page.cta.link }}" target="blank">page.cta.label</a>
+  	<a href="{{ page.cta.link }}" target="blank">{{ page.cta.label }}</a>
   {% endif %}
 
   <div class="entry">
