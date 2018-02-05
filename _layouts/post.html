@@ -6,7 +6,7 @@ layout: page-default
   <h1>{{ page.title }}</h1>
   <h2>{{ page.excerpt }}</h2>
   <h3>{{ page.category }}</h3>
-  {% for tag in post.tags %}
+  {% for tag in page.tags %}
   	<a class="tag" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
   {% endfor %}
   {% if page.cta!= null %}
