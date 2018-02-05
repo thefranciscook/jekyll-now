@@ -14,6 +14,7 @@ cta: {label: "Video", link: "https://vimeo.com/88575025"}
 💡 We designed, organized and facilitated the jams. Mentored participants to get the most out of the event. 
 
 ✌️ This event and its participants are the root of Budapest’s thriving service design scene today.
+
 - Introduced service design and design thinking to the local startup scene
 - 700+ followers on our Facebook page 
 - 400+ members in our Service Design Budapest facebook group
@@ -22,6 +23,7 @@ cta: {label: "Video", link: "https://vimeo.com/88575025"}
 💙 The thrill of startig some thing new and exciting. Teching people something I’m passionate about. 
 
 💰 Value I brought to the project:
+
 - Making it happen
 - Service design experience
 - Workshop design and facilitation

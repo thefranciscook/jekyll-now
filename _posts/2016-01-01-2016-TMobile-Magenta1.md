@@ -12,6 +12,7 @@ cta: {label: "Press release", link: "https://www.telekom.com/en/company/details/
 ⚡ Deutsche Telekom set out to design a premium omnichannel customer care experience for a new upmarket offering launched in 7 countries accross Europe. 
 
 💡 The project team consisted of representatives from DT and the directors of customer experience of the participating 7 countries.
+
 - We designed a remote service desing process with in-person workshops at key points of the process.
 - An initial scoping workshop mapped the customer journey stages and the areas of improvement (installation, first use, billing, cc, in-store experience).
 - Remote research conducted by our team collected the best practices from the participating countries.
@@ -22,6 +23,7 @@ cta: {label: "Press release", link: "https://www.telekom.com/en/company/details/
 ✌️ The new premium care jounrey increased customer satisfaction by 22%. 
 
 💰 Value I brought to the project:
+
 - The ability to design and lead service design projects
 - Consulting experience in large organizations
 - Design research and prototyping expertise 

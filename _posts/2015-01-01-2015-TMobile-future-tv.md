@@ -15,6 +15,7 @@ tags: [telecommunications, servicedesign, consulting]
 ✌️ The workshop served as an inspiration for a follow-up large scale project. 
 
 💰 Value I brought to the project:
+
 - Experience in facilitating international workshops
 - Service design experience with T-Mobile 
 

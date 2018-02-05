@@ -20,28 +20,19 @@
       max-height: 100px;
       max-width: 100px;
     }
+
+    .project-title {
+      text-transform: uppercase;
+    }
+
+    .project-excerpt {
+      font-weight: 400;
+    }
     </style>
 
     <style>
-        /*.slideshow {width:350px; height:300px; overflow:hidden; position:relative; }
-        .slideshow img{ position:absolute; animation:slideshow 8s infinite; opacity:0; width: 100%; height: auto;}
-
-        @keyframes slideshow {25%{opacity:1;} 40%{opacity:0;}} 
-        .slideshow img:nth-child(4){animation-delay:0s;}
-        .slideshow img:nth-child(3){animation-delay:2s;}
-        .slideshow img:nth-child(2){animation-delay:4s;}
-        .slideshow img:nth-child(1){animation-delay:6s;}*/
-
-        .slideshow {width:300px; height:150px; overflow:hidden; position:relative; }
-        .slideshow img{ position:absolute; animation:slideshow 8s infinite; opacity:0; width: 100%; height: auto;}
-
-        @keyframes slideshow {25%{opacity:1;} 40%{opacity:0;}} 
-        .slideshow img:nth-child(4){animation-delay:0s;}
-        .slideshow img:nth-child(3){animation-delay:2s;}
-        .slideshow img:nth-child(2){animation-delay:4s;}
-        .slideshow img:nth-child(1){animation-delay:6s;}
-
         @media only screen and (min-width: 30em) {
+          .one-column { width: 66.66%; }
           .two-column { width: 50%; }
           .main { width: 66.66%;}
           .side { width: 33.33%;}
@@ -82,6 +73,7 @@
 
   <body>
 
+<!--
     <a href="categories.html" >CATEGORIES TODO</a>
 
     {% comment %}
@@ -118,6 +110,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
    {% endfor %}
   </ul>
 {% endfor %}
+-->
     
       <div id="main" role="main" class="container">
         <div class="row">
@@ -166,7 +159,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
                 {% for posts in category %}
                   {% for post in posts %}
                     {% if post.url %}
-                    <div id="{{post.url  | replace:'/',''}}-card"  class="col project-card two-column" >
+                    <div id="{{post.url  | replace:'/',''}}-card"  class="col project-card one-column" >
                       <div>
                         {% for image in site.static_files %}
                           {% if image.path contains post.url %}
@@ -175,9 +168,9 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
                         {% endfor %}
                       </div>
                       <div >
-                        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-                        <p class="entry">{{ post.excerpt }}</p>
-                        <a class="show_details_button {{post.url  | replace:'/',''}}-card" href="#{{post.url  | replace:'/',''}}-card" role="button" onclick="toggle_visibility('{{post.url  | replace:'/',''}}-card');" style="display: block">show project details</a>
+                        <h3 class="project-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                        <p class="entry project-excerpt">{{ post.excerpt }}</p>
+                        <a class="show_details_button {{post.url  | replace:'/',''}}-card"  role="button" onclick="toggle_visibility('{{post.url  | replace:'/',''}}-card');" style="display: block">show project details</a>
                         <div class="show_details_content {{post.url  | replace:'/',''}}-card" style="display: none">
                           {{ post.content }}
                         </div>

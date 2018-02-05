@@ -12,6 +12,7 @@ cta: {label: "Case-study video", link: "https://www.youtube.com/watch?v=ktNnXqW9
 ⚡ T-Mobile introduced a new online authorization method, but in-store activations were below expectations. 
 
 💡 We applied service design thinking and together with the client’s project team we solved the problem in four steps:
+
 1. Explored the problem from both the sales representatives’ and both the customers’ perspective through contextual inquiries and workshops.
 2. Created a new gamification based incentive program targeted for educational goals.
 3. Tested the new concept at an 80 person workshop, where store managers could experience the new incentive system as a game. Their input was important both as important stakeholders, both as gatekeepers to sales representatives.
@@ -20,6 +21,7 @@ cta: {label: "Case-study video", link: "https://www.youtube.com/watch?v=ktNnXqW9
 ✌️ The new gamification based incentive system reached wide adoption among the sales representatives, and proved to be an effective new leg in our client’s incentive system. “The service design approach is beneficial, when you are trying to find something very new. A very different approach, that Isobar Budapest is brining to our business, and at the end of the day we’ve got what we wanted.” — Peter Gricser, Field Execution Director 
 
 💰 Value I brought to the project:
+
 - I contributed to the development of the mechanics of the gamification based incentive system.
 - Facilitated at the 80 person workshop as part of a 4 person team. 
 

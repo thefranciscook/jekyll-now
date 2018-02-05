@@ -16,6 +16,7 @@ cta: {label: "Website", link: "http://investor.superdelivery.ai"}
 ✌️ Meeting with reality, the concept changed dramatically several times, and finally a strong shared vision emerged. This enabled the team to move forward with their patents and investor pitches. 
 
 💰 Value I brought to the project:
+
 - Experience in working with early-stage startups
 - Being a partner for the founder, to have someone to bounce ideas off
 - Familiarity with the tech involved (VR, AI) as an enigneer
