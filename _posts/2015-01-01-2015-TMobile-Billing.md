@@ -11,15 +11,15 @@ cta: {label: "Case study video", link: "https://www.youtube.com/watch?v=y_Vlio5f
 
 ⚡ Digital bill payment adoption at T-Mobile was below expectations, while stores suffered from low-value transactions, like physical bill payments. 
 
-💡 To tackle the complexity of a large organization, like T-Mobile we designed a participative design process. A team of representatives from 20 departments worked together for a year to develop solutions to the challenge. Team members took part in: 
+💡 To tackle the complexity of a large organization, like T-Mobile we designed a *participative design process*. *Participants from 20 departments* worked together *for a year* to develop solutions to the challenge. Team members took part in: 
 
-- guided ethnographic research, 
-- ideation and concepting workshops, 
-- prototyping and testing rounds, 
+- guided *ethnographic research*, 
+- ideation and concepting *workshops*, 
+- *prototyping* and testing rounds, 
 - designed and evaluated pilot projects
 - and led the implementation of the new or improved services. 
 
-✌️The solutions improved adoption at key points of the customers’ journey reducing costs by 1 million dollars annually:
+✌️The solutions improved adoption at key points of the customers’ journey *reducing costs by 1 million dollars annually*:
 
 1. In-store evangelists aproached customers while they were waiting in line at the stores, and had them try online payment on their own devices
 2. Bill notification emails went out for all customers, with a no-password link to online bill payment

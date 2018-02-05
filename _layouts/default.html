@@ -28,6 +28,16 @@
     .project-excerpt {
       font-weight: 400;
     }
+
+    .project-tags {
+      opacity: .5;
+    }
+
+    .show_details_content em {
+      font-style: normal;
+      background-color: rgba(255,255,255,0.2);
+    }
+
     </style>
 
     <style>
@@ -169,11 +179,14 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
                       </div>
                       <div >
                         <h3 class="project-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                        <p class="project-date">{{ post.date | date: "%Y" }}</p>
                         <p class="entry project-excerpt">{{ post.excerpt }}</p>
-                        <a class="show_details_button {{post.url  | replace:'/',''}}-card"  role="button" onclick="toggle_visibility('{{post.url  | replace:'/',''}}-card');" style="display: block">show project details</a>
+                        
+                        <p><a class="show_details_button {{post.url  | replace:'/',''}}-card"  role="button" onclick="toggle_visibility('{{post.url  | replace:'/',''}}-card');" style="display: block">➡️ Project details</a></p>
                         <div class="show_details_content {{post.url  | replace:'/',''}}-card" style="display: none">
                           {{ post.content }}
                         </div>
+                        <p class="project-tags">{% for tag in post.tags %} <a class="tag" href="/blog/tag/#{{ tag | slugify }}">#{{ tag }}</a>{% endfor %}</p>
 
                       </div>
                     </div>
@@ -185,6 +198,8 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
             {% endfor %}
           </div>
         </div>
+
+        
 
         
       </div>

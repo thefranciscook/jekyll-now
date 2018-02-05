@@ -7,11 +7,11 @@ tags: [innovation, consulting, startup]
 cta: {label: "Website", link: "http://investor.superdelivery.ai"}
 ---
 
-🏢 SuperDelivery.ai, a team of veteran professionals with 10+ years in the world of global finance / US startups / IoT product companies. 
+🏢 SuperDelivery.ai, a *team of veteran professionals with 10+ years experience* in the world of global finance / US startups / IoT product companies. 
 
-⚡ The founders discovered a need, had a strong sense of a tech solution and needed help in developing it into a complete service concept. 
+⚡ The founders discovered a need, had a strong sense of a tech solution and needed *advice in developing it into a complete service concept*. 
 
-💡 Together with the founders we designed a series of research activities , workshops, offsites and prototyping rounds to validate the need and develop a shared vision. 
+💡 Together with the founders we designed a series of research activities, workshops, offsites and prototyping rounds to *validate the need and develop a shared vision*. 
 
 ✌️ Meeting with reality, the concept changed dramatically several times, and finally a strong shared vision emerged. This enabled the team to move forward with their patents and investor pitches. 
 

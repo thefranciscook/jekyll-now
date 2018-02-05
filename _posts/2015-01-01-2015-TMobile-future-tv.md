@@ -3,14 +3,14 @@ layout: post
 title: ‘Future of TV experience’ for T-Mobile
 excerpt: Designed and facilitated a workshop for a group of Customer Experience Directors from 7 countries
 category: Strategic
-tags: [telecommunications, servicedesign, consulting]
+tags: [telecommunications, servicedesign, consulting, international]
 ---
 
 🏢 Deutsche Telekom (DT, T-Mobile’s parent co.) is Europe’s leading telecommunications provider (73,1 billion euros in revenue, 50 national companies, 60, customers) 
 
-⚡ Deutsche Telekom approached us to advice them in the design of a wokrshop aimed at exploring the industry’s biggest growth dirver. 
+⚡ Deutsche Telekom approached us to advice them in the delivery of workshop about the future of thier TV offerings, with *Customer Experience Directors participating* from the national companies.
 
-💡 I designed and facilitated the workshop following a base journey approach, where we first mapped a journey based on the core value proposition, and later marked the parts specific for various customer segment. We relied on their expertise as customer advocates, as there was no budget for research. It was also my task to organize the logistics (venue, catering) the event required. 
+💡 I *co-designed and co-facilitated the workshop with DT's innovation team*. We followed a base-journey approach, where we first mapped a journey based on the core value proposition, and later marked the parts specific for various customer segment. We relied on the participants expertise as customer advocates, as there was no budget for research. It was also my task to organize the logistics (venue, catering) the event required. 
 
 ✌️ The workshop served as an inspiration for a follow-up large scale project. 
 

@@ -9,16 +9,16 @@ cta: {label: "Press release", link: "https://www.telekom.com/en/company/details/
 
 🏢 Deutsche Telekom (DT, T-Mobile’s parent co.) is Europe’s leading telecommunications provider (73,1 billion euros in revenue, 50 national companies, 60, customers) 
 
-⚡ Deutsche Telekom set out to design a premium omnichannel customer care experience for a new upmarket offering launched in 7 countries accross Europe. 
+⚡ Deutsche Telekom set out to design an * omnichannel customer care experience* for a *new upmarket offering* launched in 7 countries accross Europe. 
 
-💡 The project team consisted of representatives from DT and the directors of customer experience of the participating 7 countries.
+💡 The project team consisted of representatives from DT and the *directors of customer experience of the participating 7 countries*.
 
-- We designed a remote service desing process with in-person workshops at key points of the process.
+- We designed a *remote service desing process* with in-person workshops at key points of the process.
 - An initial scoping workshop mapped the customer journey stages and the areas of improvement (installation, first use, billing, cc, in-store experience).
 - Remote research conducted by our team collected the best practices from the participating countries.
-- We assembled a unified ideal cutomer journey from the best practices.
+- We assembled a *unified ideal cutomer journey from the best practices*.
 - We prepared a cookbook of practices to aid the national companies to implement the unified customer journey.
-- New experimental solutions were prototyped and evaluated at different countries. 
+- New experimental *solutions were prototyped and evaluated at different countries*. 
 
 ✌️ The new premium care jounrey increased customer satisfaction by 22%. 
 
