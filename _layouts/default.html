@@ -131,28 +131,31 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
 
             <h2>Projects</h2>
 
-            <div class="row">
-              {% for post in site.posts %}
-                <div id="{{post.url  | replace:'/',''}}-card"  class="col project-card two-column" >
-                  
-                  <div class="slideshow">
-                    {% for image in site.static_files %}
-                      {% if image.path contains post.url %}
-                       <img src="./{{image.path}} "/>
-                      {% endif %}
-                    {% endfor %}
-                  </div>
-                
+            {% for category in site.categories %}
+              <h3 name="{{ category | first }}">{{ category | first }}</h3>
 
-                  <div >
-                    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-                    <p class="entry">{{ post.excerpt }}</p>
-                  </div>
-                  
-
-                </div>
-              {% endfor %}
-            </div>
+              <div class="row">
+                {% for posts in category %}
+                  {% for post in posts %}
+                    {% if post.url %}
+                    <div id="{{post.url  | replace:'/',''}}-card"  class="col project-card two-column" >
+                      <div>
+                        {% for image in site.static_files %}
+                          {% if image.path contains post.url %}
+                           <img src="./{{image.path}} "/>
+                          {% endif %}
+                        {% endfor %}
+                      </div>
+                      <div >
+                        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                        <p class="entry">{{ post.excerpt }}</p>
+                      </div>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              </div>
+            {% endfor %}
           </div>
         </div>
 
