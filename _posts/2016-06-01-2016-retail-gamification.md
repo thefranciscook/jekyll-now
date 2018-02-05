@@ -1,7 +1,0 @@
----
-layout: post
-title: Gamified retail employee incentive program
-excerpt: Service design (2016, Hungary)
----
-
-Lorem ipsum dolor amet pBR&B organic lyft forage bicycle rights. Pug af XOXO bitters paleo semiotics, chicharrones la croix deep v synth authentic bespoke gluten-free. Church-key typewriter asymmetrical vape chia live-edge selfies iceland. Trust fund pour-over tacos, chartreuse yuccie cred ramps austin. Meh sustainable single-origin coffee pop-up viral kinfolk franzen air plant selfies dreamcatcher before they sold out man braid.
