@@ -6,12 +6,20 @@ layout: page-default
   <h1>{{ page.title }}</h1>
   <h2>{{ page.excerpt }}</h2>
   <h3>{{ page.category }}</h3>
+
+  <ul>
   {% for tag in page.tags %}
-  	<a class="tag" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+  	<li>
+  		<a class="tag" href="/blog/tag/#{{ tag | slugify }}">#{{ tag }}</a>
+  	</li>
   {% endfor %}
+  </ul>
+
+  <p>
   {% if page.cta!= null %}
   	<a href="{{ page.cta.link }}" target="blank">{{ page.cta.label }}</a>
   {% endif %}
+  </p>
 
   <div class="entry">
     {{ content }}
