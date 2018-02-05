@@ -48,6 +48,33 @@
         }
     </style>
 
+    <script type="text/javascript">
+
+        function toggle_visibility(id) {
+           var projectCard = document.getElementById(id);
+
+           if(projectCard){
+
+             var showMoreButton = document.getElementsByClassName('show_details_button ' + id);
+             var showMoreContent = document.getElementsByClassName('show_details_content ' + id);;
+
+             
+
+              if(showMoreButton && showMoreContent){
+                toggle_element_visibility(showMoreButton[0]);
+                toggle_element_visibility(showMoreContent[0]);
+              }
+            }
+        }
+
+        function toggle_element_visibility(e){
+          if(e.style.display == 'block')
+              e.style.display = 'none';
+           else
+              e.style.display = 'block';
+        }
+    </script>
+
 
 
 
@@ -150,6 +177,11 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
                       <div >
                         <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
                         <p class="entry">{{ post.excerpt }}</p>
+                        <a class="show_details_button {{post.url  | replace:'/',''}}-card" href="#{{post.url  | replace:'/',''}}-card" role="button" onclick="toggle_visibility('{{post.url  | replace:'/',''}}-card');" style="display: block">show project details</a>
+                        <div class="show_details_content {{post.url  | replace:'/',''}}-card" style="display: none">
+                          {{ post.content }}
+                        </div>
+
                       </div>
                     </div>
                     {% endif %}
