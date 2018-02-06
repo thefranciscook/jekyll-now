@@ -1,19 +1,23 @@
-<div class="col-md-4 col-xs-6">
+<div class="col-md-4 col-xs-6 mb-4">
 	<div class="card h-100" >
-		{% for image in site.static_files %}
-	      {% if image.path contains post.url %}
-	       <img class="card-img-top" src="./{{image.path}}" alt="Card image cap">
-	      {% endif %}
-	    {% endfor %}
+		<!--<div role="button" data-toggle="modal" data-target="#{{post.url  | replace:'/',''}}-modal">-->
+			{% for image in site.static_files %}
+		      {% if image.path contains post.url %}
+		       <img class="card-img-top" src="./{{image.path}}" alt="Card image cap">
+		      {% endif %}
+		    {% endfor %}
 	  
-	  <div class="card-body">
-	    <h5 class="card-title">{{ post.title }}, <span class="project-date">{{ post.date | date: "%Y" }}</span></h5>
-	    <p class="card-text">{{ post.excerpt }}</p>
-	    <p class="project-tags">{% for tag in post.tags %} #{{ tag }}{% endfor %}</p>
-	    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{post.url  | replace:'/',''}}-modal">
-	  	Read more..
-		</button>
-		{% include project-modal.html %}
-	  </div>
+		  	<div class="card-body">
+			    <h5 class="card-title">{{ post.title }}, <span class="project-date">{{ post.date | date: "%Y" }}</span></h5>
+			    <p class="card-text">{{ post.excerpt }}</p>
+			    <p class="project-tags">{% for tag in post.tags %} #{{ tag }}{% endfor %}</p>
+			</div>
+
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#2018-tisdd-modal">
+		  	Read more..
+			</button>
+	  	<!--</div>-->
+
+	  	{% include project-modal.html %}
 	</div>
 </div>
