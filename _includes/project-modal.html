@@ -16,7 +16,9 @@
 	      	{% for image in site.static_files %}
 		      {% if image.path contains post.url %}
 		       <img src="./{{image.path}}" alt="Card image cap"></img>
+		       {% break %}
 		      {% endif %}
+
 		    {% endfor %}
 		</div>
 		<p class="text-uppercase"><small class="text-muted">{{ post.category }}, {{ post.date | date: "%Y" }}</small></p>
