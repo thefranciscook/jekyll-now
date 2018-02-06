@@ -68,7 +68,11 @@
 
            $('.modal').on('hide.bs.modal', function (e) {
                
-                   window.location.hash = "";
+                   if ( window.history && window.history.pushState ) { 
+                        window.history.pushState('', '', window.location.pathname) 
+                    } else { 
+                        window.location.href = window.location.href.replace(/#.*$/, '#'); 
+                    }
                 
            });
       });
@@ -81,6 +85,10 @@
   </head>
 
   <body>
+
+    <nav class="navbar sticky-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">Sticky top</a>
+</nav>
     
       <div id="main" role="main" class="container">
         <div class="row">
