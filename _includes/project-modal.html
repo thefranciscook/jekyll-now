@@ -1,3 +1,4 @@
+
 <div id="{{post.url  | replace:'/',''}}-modal"  class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -11,6 +12,13 @@
   -->
 
       <div class="modal-body">
+      	<div class="modal-header-container">
+	      	{% for image in site.static_files %}
+		      {% if image.path contains post.url %}
+		       <img src="./{{image.path}}" alt="Card image cap"></img>
+		      {% endif %}
+		    {% endfor %}
+		</div>
       	<h5 class="modal-title">{{ post.title }}</h5>
         <p>{{ post.excerpt }}</p>
         <p>{{ post.category }}</p>
@@ -30,4 +38,9 @@
       </div>
     </div>
   </div>
+
+	<button type="button" class="close modal-close-fixed" data-dismiss="modal" aria-label="Close">
+        <span>×</span>
+    </button>
+
 </div>

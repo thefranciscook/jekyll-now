@@ -25,6 +25,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
+
+
+
     <style>
     
     #social {
@@ -46,7 +49,47 @@
         margin-top: .5em;
       }
 
-    </style>
+
+      .card:hover { background-color: #E1ECF4; }
+
+
+
+        .modal-close-fixed {
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 8px;
+}
+
+.modal-header-container {
+  margin-top: -1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.modal-header-container img {
+  object-fit: cover;  /*Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  width: 100%;
+  max-height: 250px;
+  margin-bottom: 1rem;
+}
+
+        .close {
+          opacity: 1;
+          
+        }
+
+        .close span {
+          font-weight: 200; color: white; font-size: 2em;
+        }
+
+        .close:focus, .close:hover {
+            text-decoration: none;
+            opacity: 1;
+        }
+
+</style>
 
     <script type="text/javascript">
 
