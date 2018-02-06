@@ -29,23 +29,14 @@
 
 
     <style>
-    
-    #social {
-      padding: .3em;
-    }
 
-      .social {
-        width: 1.4em;
-        margin-right: .5em;
-        opacity: 1;
-        
-      }
-
-      #social {
-        margin-top: .5em;
-      }
-
-
+    *[id]:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -75px; 
+  height: 75px; 
+  visibility: hidden; 
+}
       .card:hover { background-color: #E1ECF4; }
 
 
@@ -93,7 +84,11 @@
       $(function(){
           if(window.location.hash) {
               var hash = window.location.hash;
+              if(hash !== '#digital' && hash !== '#fun' && hash !== '#strategic' )
+              {
               $(hash).modal('toggle');
+              }
+              else{}
           }
       });
 
@@ -123,24 +118,24 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#top-navbar">
 
     <!-- TODO navbar scrollspy -->
-      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Francis Cook</a>
-        <div class="collapse navbar-collapse" id="navbarText">
+      <nav id="top-navbar" class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand text-uppercase" href="#">Francis Cook</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="#strategic">Strategic</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Strategic</a>
+              <a class="nav-link" href="#digital">Digital</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Digital</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Fun</a>
+              <a class="nav-link" href="#fun">Fun</a>
             </li>
           </ul>
         </div>
@@ -154,20 +149,18 @@
 
             
     
-            <h1>Francis Cook</h1>
+            <h1 class="mt-5 text-uppercase">Francis Cook</h1>
 
-            <p>Strategic Designer based in Toronto. Ten years in the intersection of <strong>design</strong>, <strong>technology</strong> and <strong>business</strong>.</p>
+            <p class="lead">Strategic Designer based in Toronto. Ten years in the intersection of <strong>design</strong>, <strong>technology</strong> and <strong>business</strong>.</p>
           
             <div>
               <div id="contact">
                   <a href="tel:+1-647-558-4955">+1-647-558-4955</a><br />
                   <a href="mailto:hello@franciscook.com">hello@franciscook.com</a>
-              </div>
-
-              <div id="social">
-                <a href="http://www.linkedin.com/in/thefranciscook" target="_blank"><img class="social" src="./images/linkedin.svg"></img></a>
-                <a href="http://www.twitter.com/thefranciscook" target="_blank"><img class="social" src="./images/twitter.svg"></img></a>
-                <a href="http://www.github.com/thefranciscook" target="_blank"><img class="social" src="./images/github.svg"></img></a>
+                  <br />
+                  <a href="http://www.linkedin.com/in/thefranciscook" target="_blank">LinkedIn</a>
+                  <a href="http://www.twitter.com/thefranciscook" target="_blank">Twitter</a>
+                  <a href="http://www.github.com/thefranciscook" target="_blank">GitHub</a>
               </div>
             </div>
             </div>
@@ -175,10 +168,10 @@
 
         </div>
 
-        <div id="projects">
-          <h2>Projects</h2>
+        <div id="projects" class="mt-5">
 
-            <h3 class="project-category text-uppercase">Strategic</h3>
+            <h5 id="strategic"  class="project-category text-uppercase">Strategic projects</h5>
+            <p class="text-secondary"><small>Service Design / Innovation Consulting / Product Management</small></p>
             <div class="row">
                 {% for post in site.categories.Strategic %}
                   {% if post.url %}
@@ -189,7 +182,8 @@
                 
             </div>
 
-            <h3 class="project-category text-uppercase">Digital</h3>
+            <h5 id="digital" class="project-category text-uppercase">Digital projects</h5>
+            <p class="text-secondary"><small>User Experience Design / Product Design / Web Development</small></p>
             <div class="row">
                 {% for post in site.categories.Digital %}
                   {% if post.url %}
@@ -198,7 +192,8 @@
                 {% endfor %}
             </div>
 
-            <h3 class="project-category text-uppercase">Fun</h3>
+            <h5 id="fun"  class="project-category text-uppercase">Fun projects</h5>
+            <p class="text-secondary"><small>Newtech / Community</small></p>
             <div class="row">
                 {% for post in site.categories.Fun %}
                   {% if post.url %}
