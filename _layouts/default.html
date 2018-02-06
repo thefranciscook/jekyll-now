@@ -101,29 +101,29 @@
 
     <script type="text/javascript">
 
-        function toggle_visibility(id) {
-           var projectCard = document.getElementById(id);
+      // lodal modal on load
+      $(function(){
+          if(window.location.hash) {
+              var hash = window.location.hash;
+              $(hash).modal('toggle');
+          }
+      });
 
-           if(projectCard){
+      // updates hash on modal
+      $(document).ready(function () {
+           $('.modal').on('show.bs.modal', function (e) {
+               if (typeof (e.relatedTarget) != "undefined") {
+                   window.location.hash = $(e.relatedTarget).data('target');
+               } 
+           });
 
-             var showMoreButton = document.getElementsByClassName('show_details_button ' + id);
-             var showMoreContent = document.getElementsByClassName('show_details_content ' + id);;
+           $('.modal').on('hide.bs.modal', function (e) {
+               
+                   window.location.hash = "";
+                
+           });
+      });
 
-             
-
-              if(showMoreButton && showMoreContent){
-                toggle_element_visibility(showMoreButton[0]);
-                toggle_element_visibility(showMoreContent[0]);
-              }
-            }
-        }
-
-        function toggle_element_visibility(e){
-          if(e.style.display == 'block')
-              e.style.display = 'none';
-           else
-              e.style.display = 'block';
-        }
     </script>
 
 
