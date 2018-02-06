@@ -11,22 +11,22 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,700,400,800" rel="stylesheet">
 
-    <!--<script type="text/javascript" src="./js/isotope.pkgd.min.js"></script>-->
+
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
     <style>
     
-
-
     #social {
       position: absolute;
       top: 0;
@@ -35,68 +35,17 @@
       padding: .3em;
     }
 
-    #projects article img {
-      max-height: 100px;
-      max-width: 100px;
-    }
+      .social {
+        width: 1.4em;
+        margin-right: .5em;
+        opacity: .5;
+        
+      }
 
-    .project-card {
-      font-size: .9em;
-      min-height: 310px;
-    }
+      #social {
+        margin-top: .5em;
+      }
 
-    .project-title {
-      text-transform: none;
-    }
-
-    .project-excerpt {
-      font-weight: 400;
-    }
-
-    .project-tags {
-      opacity: .5;
-      font-size: .9em;
-      margin-top: -1em;
-    }
-
-    .show_details_content em {
-      font-style: normal;
-      background-color: rgba(255,255,255,0.2);
-    }
-
-    .project-category {
-      text-transform: uppercase;
-    }
-
-    </style>
-
-    <style>
-        /* Dead Simple Grid (c) 2015 Vladimir Agafonkin */
-
-        .row .row { margin:  0 -1.5em; }
-        .col      { padding: 0  1.5em; }
-
-        .row:after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        @media only screen { .col {
-            float: left;
-            width: 100%;
-            box-sizing: border-box;
-        }}
-
-        /* */
-
-        @media only screen and (min-width: 30em) {
-          .one-column { width: 66.66%; }
-          .two-column { width: 50%; }
-          .four-column {width: 25%; }
-          .main { width: 66.66%;}
-          .side { width: 33.33%;}
-        }
     </style>
 
     <script type="text/javascript">
@@ -132,52 +81,13 @@
   </head>
 
   <body>
-
-<!--
-    <a href="categories.html" >CATEGORIES TODO</a>
-
-    {% comment %}
-=======================
-The purpose of this snippet is to list all the tags you have in your site.
-=======================
-{% endcomment %}
-{% for tag in tags %}
-  <a href="#{{ tag | slugify }}"> {{ tag }} </a>
-{% endfor %}
-
-{% comment %}
-=======================
-The purpose of this snippet is to list all your posts posted with a certain tag.
-=======================
-{% endcomment %}
-{% for tag in tags %}
-  <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
-  <ul>
-   {% for post in site.posts %}
-     {% if post.tags contains tag %}
-     <li>
-     <h3>
-     <a href="{{ post.url }}">
-     {{ post.title }}
-     <small>{{ post.date | date_to_string }}</small>
-     </a>
-     {% for tag in post.tags %}
-       <a class="tag" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
-     {% endfor %}
-     </h3>
-     </li>
-     {% endif %}
-   {% endfor %}
-  </ul>
-{% endfor %}
--->
     
       <div id="main" role="main" class="container">
         <div class="row">
           <div class="col">
             <h1>Francis Cook</h1>
 
-            <blockquote>Strategic Designer based in Toronto. Ten years in the intersection of <strong>design</strong>, <strong>technology</strong> and <strong>business</strong>.</blockquote>
+            <p>Strategic Designer based in Toronto. Ten years in the intersection of <strong>design</strong>, <strong>technology</strong> and <strong>business</strong>.</p>
           
             <div>
               <div id="contact">
@@ -188,63 +98,46 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
               <div id="social">
                 <a href="http://www.linkedin.com/in/thefranciscook" target="_blank"><img class="social" src="./images/linkedin.svg"></img></a>
                 <a href="http://www.twitter.com/thefranciscook" target="_blank"><img class="social" src="./images/twitter.svg"></img></a>
-                <!--<a href="http://www.instagram.com/thefranciscook" target="_blank"><img class="social" src="./images/instagram.svg"></img></a>-->
                 <a href="http://www.github.com/thefranciscook" target="_blank"><img class="social" src="./images/github.svg"></img></a>
               </div>
             </div>
-
-            
-            <!--
-              <h2>Highlights</h2>
-              <ul>
-                <li>Leading the redesign of Erste Bank Hungary's website</li>
-                <li>Advising a startup disrupting last-mile delivery with VR</li>
-                <li>Running an innovation workshop series for LogMeIn</li>
-                <li>Multi-channel service design of T-Mobile Hungary's bill payment services</li>
-              </ul>
-               -->
             </div>
 
 
         </div>
 
-        <div class="row" id="projects">
-          <div class="col">
+        <div id="projects">
+          <h2>Projects</h2>
 
-            <h2>Projects</h2>
+            <h3 class="project-category">Strategic</h3>
+            <div class="row">
+                {% for post in site.categories.Strategic %}
+                  {% if post.url %}
+                    {% include project-list-item.html %}
+                  {% endif %}
+                {% endfor %}
 
-              <h3 class="project-category">Strategic</h3>
-              <div class="row">
-                  {% for post in site.categories.Strategic %}
-                    {% if post.url %}
-                      {% include project-list-item.html %}
-                    {% endif %}
-                  {% endfor %}
-              </div>
+                
+            </div>
 
-              <h3 class="project-category">Digital</h3>
-              <div class="row">
-                  {% for post in site.categories.Digital %}
-                    {% if post.url %}
-                      {% include project-list-item.html %}
-                    {% endif %}
-                  {% endfor %}
-              </div>
+            <h3 class="project-category">Digital</h3>
+            <div class="row">
+                {% for post in site.categories.Digital %}
+                  {% if post.url %}
+                    {% include project-list-item.html %}
+                  {% endif %}
+                {% endfor %}
+            </div>
 
-              <h3 class="project-category">Fun</h3>
-              <div class="row">
-                  {% for post in site.categories.Fun %}
-                    {% if post.url %}
-                      {% include project-list-item.html %}
-                    {% endif %}
-                  {% endfor %}
-              </div>
-          </div>
-        </div>
-
-        
-
-        
+            <h3 class="project-category">Fun</h3>
+            <div class="row">
+                {% for post in site.categories.Fun %}
+                  {% if post.url %}
+                    {% include project-list-item.html %}
+                  {% endif %}
+                {% endfor %}
+            </div>
+        </div> 
       </div>
 
     {% include analytics.html %}
