@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Omnichannel sales support, T-Mobile, service design
-excerpt: xxxx
 category: Strategic
-tags: [xxx, xxx, xxx]
-cta: {label: "xxx", link: "xxx"}
+excerpt: Case description is coming...
+tags: [draft]
+cta: {label: "don't click me", link: "#"}
 ---
 
-xx
+Hire me fast! You literally stumblod upon my portfolio, while I am updating it for my job hunt next week.
