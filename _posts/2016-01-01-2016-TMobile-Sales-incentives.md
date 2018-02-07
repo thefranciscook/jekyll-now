@@ -1,6 +1,6 @@
 ---
 layout: post
-title: T-Mobile gamified sales incentive program 
+title: Gamified sales incentive program, T-Mobile
 excerpt: Digital transformation of bill payments across physical and digital channels
 category: Strategic
 tags: [telecommunications, servicedesign, consulting]

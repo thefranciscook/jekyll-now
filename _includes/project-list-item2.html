@@ -1,0 +1,13 @@
+<li class="media mb-2">
+{% for image in site.static_files %}
+    {% if image.path contains post.url %}      
+      <img class="mr-3" src="./{{image.path}}" alt="{{ post.title }}" style="width: 64px; height: 64px;"></img>
+    {% break %} 
+    {% endif %}
+  {% endfor %}                
+  <div class="media-body">
+    <p class="mb-0">{{ post.title }}</p>
+    <!--<p class="text-secondary mb-0"><small>{{ post.excerpt }}</small></p>-->
+  </div>
+  
+</li>

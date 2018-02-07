@@ -1,6 +1,6 @@
 ---
 layout: post
-title: T-Mobile billing service design
+title: Billing service design, T-Mobile
 excerpt: Digital transformation of bill payments across physical and digital channels
 category: Strategic
 tags: [telecommunications, servicedesign, consulting]

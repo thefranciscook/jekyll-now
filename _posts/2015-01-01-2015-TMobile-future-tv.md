@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ‘Future of TV experience’ for T-Mobile
+title: ‘Future of TV experience’ workshop, T-Mobile
 excerpt: Designed and facilitated a workshop for a group of Customer Experience Directors from 7 countries
 category: Strategic
 tags: [telecommunications, servicedesign, consulting, international]
