@@ -18,7 +18,7 @@ layout: page-default
     }
 </style>
 
-<article class="m-3">
+<article class="m-3 mb-5">
 	<div class="header-image-container">
 	  	{% for image in site.static_files %}
 	      {% if image.path contains page.url %}
@@ -27,20 +27,23 @@ layout: page-default
 	      {% endif %}
 	    {% endfor %}
 	</div>
+	<div class="pl-3 pr-3 pb-3">
+		<p class="text-uppercase"><small class="text-muted">{{ page.category }}, {{ page.date | date: "%Y" }}</small></p>
+			<h4 class="modal-title">{{ page.title }}</h4>
+		<p class="lead">{{ page.excerpt }}</p>
 
-	<p class="text-uppercase"><small class="text-muted">{{ page.category }}, {{ page.date | date: "%Y" }}</small></p>
-		<h4 class="modal-title">{{ page.title }}</h4>
-	<p class="lead">{{ page.excerpt }}</p>
+		{% if page.cta %}
+			<a role="button" class="btn btn-primary mt-1 mb-4 " href="{{ page.cta.link }}" target="blank">{{ page.cta.label }}</a>
+		{% endif %}
 
-	{{ page.content }}
+		{{ page.content }}
 
-	<p class="text-secondary">{% for tag in page.tags %}<span>#{{ tag }}</span> {% endfor %}</p>
+		<p class="text-secondary">{% for tag in page.tags %}<span>#{{ tag }}</span> {% endfor %}</p>
 
-
-	{% if page.cta %}
-		<a role="button" class="btn btn-primary" href="{{ page.cta.link }}" target="blank">{{ page.cta.label }}</a>
-	{% endif %}
-	<a role="button" class="btn btn-secondary" href="../">Back</a>
+		<div class="float-right">
+			<a role="button" class="btn btn-secondary" data-dismiss="modal" href="../">All client cases</a>
+		</div>
+	</div>
 </article>
 
 

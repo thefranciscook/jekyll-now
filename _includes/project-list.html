@@ -1,8 +1,14 @@
+{% if include.mainpage %}
 <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+{% endif %}
   
-  	<div class="bg-white ">
-	    <h5 id="strategic"  class="project-category text-uppercase pl-1">{{ include.title }}</h5>
-	    <p class="text-secondary pl-1 mb-0"><small>{{ include.subtitle }}</small></p>
+  	<div >
+      {% if include.mainpage %}
+  	    <h5 id="strategic"  class="project-category text-uppercase pl-1">{{ include.title }}</h5>
+  	    <p class="text-secondary pl-1 mb-0"><small>{{ include.subtitle }}</small></p>
+      {% else %}
+        <p id="strategic"  class="project-category text-uppercase small mt-3 mb-0">{{ include.title }}</p>
+      {% endif %}
 	</div>
 
   <div class="bg-light pb-1">
@@ -10,9 +16,13 @@
       <li class="dropdown-divider"></li>
       {% for post in include.category %}
         {% if post.url %}
-          {% include project-list-item3.html %}
+          {% include project-list-item3.html mainpage=include.mainpage %}
         {% endif %}
       {% endfor %}
     </ul>
   </div>
+
+
+{% if include.mainpage %}
 </div>
+{% endif %}
