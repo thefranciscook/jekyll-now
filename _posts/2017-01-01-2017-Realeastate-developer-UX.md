@@ -2,7 +2,7 @@
 layout: post
 title: Realestate developer, website redesign
 excerpt: xxxx
-category: xxx
+category: Digital
 tags: [xxx, xxx, xxx]
 cta: {label: "xxx", link: "xxx"}
 ---
