@@ -2,32 +2,46 @@
 layout: page-default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
-  <h2>{{ page.excerpt }}</h2>
-  <h3>{{ page.category }}</h3>
+<style>
+	.header-image-container {
+      margin-top: -1rem;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
 
-  <ul>
-  {% for tag in page.tags %}
-  	<li>
-  		<a class="tag" href="/blog/tag/#{{ tag | slugify }}">#{{ tag }}</a>
-  	</li>
-  {% endfor %}
-  </ul>
+    .header-image-container img {
+      object-fit: cover;  /*Do not scale the image */
+      object-position: center; /* Center the image within the element */
+      width: 100%;
+      max-height: 250px;
+      margin-bottom: 1rem;
+    }
+</style>
 
-  <p>
-  {% if page.cta %}
-  	<a href="{{ page.cta.link }}" target="blank">{{ page.cta.label }}</a>
-  {% endif %}
-  </p>
+<article class="m-3">
+	<div class="header-image-container">
+	  	{% for image in site.static_files %}
+	      {% if image.path contains page.url %}
+	       <img src="../{{image.path}}" alt="Card image cap"></img>
+	       {% break %}
+	      {% endif %}
+	    {% endfor %}
+	</div>
 
-  <div class="entry">
-    {{ content }}
-  </div>
+	<p class="text-uppercase"><small class="text-muted">{{ page.category }}, {{ page.date | date: "%Y" }}</small></p>
+		<h4 class="modal-title">{{ page.title }}</h4>
+	<p class="lead">{{ page.excerpt }}</p>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+	{{ page.content }}
 
-  {% include disqus.html %}
+	<p class="text-secondary">{% for tag in page.tags %}<span>#{{ tag }}</span> {% endfor %}</p>
+
+
+	{% if page.cta %}
+		<a role="button" class="btn btn-primary" href="{{ page.cta.link }}" target="blank">{{ page.cta.label }}</a>
+	{% endif %}
+	<a role="button" class="btn btn-secondary" href="../">Back</a>
 </article>
+
+
+      	
