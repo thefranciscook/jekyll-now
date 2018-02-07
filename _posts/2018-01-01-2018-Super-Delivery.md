@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Super Delivery 
+title: Advisor on board for a VR startup
 excerpt: Advising an early-stage startup disrupting the last-mile delivery market in Europe with a VR twist
 category: Newtech
 tags: [innovation, consulting, startup]

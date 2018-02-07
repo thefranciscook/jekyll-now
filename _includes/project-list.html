@@ -4,7 +4,7 @@
   
   	<div >
       {% if include.mainpage %}
-  	    <h5 id="strategic"  class="project-category text-uppercase pl-1">{{ include.title }}</h5>
+  	    <h5 id="{{include.hash}}"  class="project-category text-uppercase pl-1">{{ include.title }}</h5>
   	    <p class="text-secondary pl-1 mb-0"><small>{{ include.subtitle }}</small></p>
       {% else %}
         <p id="strategic"  class="project-category text-uppercase small mt-3 mb-0">{{ include.title }}</p>
