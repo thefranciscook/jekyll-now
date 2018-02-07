@@ -1,5 +1,4 @@
 <li class="project media mb-2" style="cursor: pointer;" role="button" data-toggle="modal" data-target="#{{post.url  | replace:'/',''}}-modal">
-             
   <div class="media-body p-2">
     <p class="mb-0"><small>{{ post.title }}</small></p>
     <!--<p class="text-secondary mb-0"><small>{{ post.excerpt }}</small></p>-->
@@ -12,4 +11,4 @@
   {% endfor %}   
   
 </li>
-{% include project-modal.html %}
+{% comment %}{% include project-modal.html %}{% endcomment %}
