@@ -30,14 +30,7 @@
 
     <style>
 
-    *[id]:before { 
-  display: block; 
-  content: " "; 
-  margin-top: -75px; 
-  height: 75px; 
-  visibility: hidden; 
-}
-      .card:hover { background-color: #E1ECF4; }
+      .project:hover { background-color: #E1ECF4; }
 
 
 
@@ -179,44 +172,15 @@
 
         </div>
 
-        <div id="projects" class="row">
+        <div id="projects" class="row mt-5 mb-5">
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <h5 id="strategic"  class="project-category text-uppercase mt-5">Service innovation</h5>
-              <p class="text-secondary"><small>Service Design / Innovation Consulting</small></p>
+            
+          {% include project-list.html category=site.categories.Strategic title="Service innovation" subtitle="Service Design / Innovation Consulting" %}
 
-              <ul class="list-unstyled">
-                {% for post in site.categories.Strategic %}
-                  {% if post.url %}
-                    {% include project-list-item2.html %}
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
+          {% include project-list.html category=site.categories.Digital title="DIGITAL DESIGN" subtitle="UX Design / Product Design / Web Development" %}
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <h5 id="digital" class="project-category text-uppercase mt-5">Digital design</h5>
-              <p class="text-secondary"><small>User Experience Design / Product Design / Web Development</small></p>
-              <ul class="list-unstyled">
-                {% for post in site.categories.Digital %}
-                  {% if post.url %}
-                    {% include project-list-item2.html %}
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <h5 id="newtech"  class="project-category text-uppercase mt-5">Newtech</h5>
-              <p class="text-secondary"><small>Startups / Product Management</small></p>
-              <ul class="list-unstyled">
-                {% for post in site.categories.Newtech %}
-                  {% if post.url %}
-                    {% include project-list-item2.html %}
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
+          {% include project-list.html category=site.categories.Newtech title="NEWTECH" subtitle="Startups / Product Management" %}
+            
         </div> 
       </div>
 

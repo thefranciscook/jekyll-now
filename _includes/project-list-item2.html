@@ -1,13 +1,15 @@
-<li class="media mb-2">
-{% for image in site.static_files %}
-    {% if image.path contains post.url %}      
-      <img class="mr-3" src="./{{image.path}}" alt="{{ post.title }}" style="width: 64px; height: 64px;"></img>
-    {% break %} 
-    {% endif %}
-  {% endfor %}                
-  <div class="media-body">
-    <p class="mb-0">{{ post.title }}</p>
+<li class="project media mb-2" style="cursor: pointer;" role="button" data-toggle="modal" data-target="#{{post.url  | replace:'/',''}}-modal">
+             
+  <div class="media-body p-2">
+    <p class="mb-0"><small>{{ post.title }}</small></p>
     <!--<p class="text-secondary mb-0"><small>{{ post.excerpt }}</small></p>-->
   </div>
+  {% for image in site.static_files %}
+    {% if image.path contains post.url %}      
+      <img class="ml-3" src="./{{image.path}}" alt="{{ post.title }}" style="width: 64px; height: 64px;"></img>
+    {% break %} 
+    {% endif %}
+  {% endfor %}   
   
 </li>
+{% include project-modal.html %}
