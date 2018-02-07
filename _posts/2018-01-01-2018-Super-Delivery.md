@@ -2,7 +2,7 @@
 layout: post
 title: Super Delivery 
 excerpt: Advising an early-stage startup disrupting the last-mile delivery market in Europe with a VR twist
-category: Strategic
+category: Newtech
 tags: [innovation, consulting, startup]
 cta: {label: "Website", link: "http://investor.superdelivery.ai"}
 ---

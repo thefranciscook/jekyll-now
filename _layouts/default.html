@@ -84,7 +84,7 @@
       $(function(){
           if(window.location.hash) {
               var hash = window.location.hash;
-              if(hash !== '#digital' && hash !== '#fun' && hash !== '#strategic' && hash != '#contact')
+              if(hash !== '#digital' && hash !== '#fun' && hash !== '#strategic' && hash != '#contact' && hash != '#newtech')
               {
               $(hash).modal('toggle');
               }
@@ -160,7 +160,7 @@
             <h1 class="mt-5 text-uppercase">Francis Cook</h1>
 
             <p class="lead">Strategic Designer based in Toronto. 
-            <br />Ten years in the intersection of <strong>design</strong>, <strong>technology</strong> and <strong>business</strong>.</p>
+            <br />Ten years in the intersection of <strong><a href="#strategic">service innovation</a></strong>, <strong><a href="#digital">digital design</a></strong> and <strong><a href="#newtech">new technology</a></strong>.</p>
           
             <div>
               <div id="contact">
@@ -181,7 +181,7 @@
 
         <div id="projects" class="">
 
-            <h5 id="strategic"  class="project-category text-uppercase mt-5">Strategic projects</h5>
+            <h5 id="strategic"  class="project-category text-uppercase mt-5">Service innovation</h5>
             <p class="text-secondary"><small>Service Design / Innovation Consulting / Product Management</small></p>
             <div class="row">
                 {% for post in site.categories.Strategic %}
@@ -193,7 +193,7 @@
                 
             </div>
 
-            <h5 id="digital" class="project-category text-uppercase mt-5">Digital projects</h5>
+            <h5 id="digital" class="project-category text-uppercase mt-5">Digital design</h5>
             <p class="text-secondary"><small>User Experience Design / Product Design / Web Development</small></p>
             <div class="row">
                 {% for post in site.categories.Digital %}
@@ -203,10 +203,10 @@
                 {% endfor %}
             </div>
 
-            <h5 id="fun"  class="project-category text-uppercase mt-5">Fun projects</h5>
+            <h5 id="newtech"  class="project-category text-uppercase mt-5">Newtech</h5>
             <p class="text-secondary"><small>Newtech / Community</small></p>
             <div class="row">
-                {% for post in site.categories.Fun %}
+                {% for post in site.categories.Newtech %}
                   {% if post.url %}
                     {% include project-list-item.html %}
                   {% endif %}
