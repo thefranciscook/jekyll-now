@@ -2,8 +2,8 @@
 layout: post
 title: Payment gateway redesign for T&#8209;Mobile
 category: Digital
-excerpt: Case description is coming...
-tags: [draft]
+excerpt: Solo UX consultancy project to enable millions of customers to pay for T&#8209;Mobile's services on their phone.
+tags: [telecommunications, UX, consultancy]
 cta: {label: "Payment FAQ page", link: "https://www.telekom.hu/lakossagi/ugyintezes/elerhetosegek/telekom-alkalmazas"}
 ---
 
