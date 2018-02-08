@@ -43,7 +43,10 @@ layout: page-default
 	<div class="pl-3 pr-3 pb-3">
 		<p class="text-uppercase"><small class="text-muted">{{ page.category }}, {{ page.date | date: "%Y" }}</small></p>
 			<h4 class="modal-title">{{ page.title }}</h4>
+
+		{% if page.excerpt %}	
 		<p class="lead">{{ page.excerpt }}</p>
+		{% endif %}
 
 		{% if page.cta %}
 			<a role="button" class="btn btn-primary mt-1 mb-4 " href="{{ page.cta.link }}" target="blank">{{ page.cta.label }}</a>
