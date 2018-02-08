@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Online payment system redesign
+title: Payment gateway redesign for T&#8209;Mobile
 category: Digital
 excerpt: Case description is coming...
 tags: [draft]

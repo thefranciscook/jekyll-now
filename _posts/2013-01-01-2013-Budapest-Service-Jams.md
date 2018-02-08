@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Budapest Service Jams
-excerpt: Co-founding the first Hungarian service design community
+title: Co-founding Budapest Service Jams
+excerpt: The first Hungarian service design community
 category: Strategic
 tags: [servicedesign, international]
 cta: {label: "Video", link: "https://vimeo.com/88575025"}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: E-commerce UX research
+title: E-commerce website redesign
 category: Digital
 excerpt: Case description is coming...
 tags: [draft]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Omnichannel sales support, T-Mobile, service design
+title: Omnichannel sales support for T&#8209;Mobile
 category: Strategic
 excerpt: Case description is coming...
 tags: [draft]

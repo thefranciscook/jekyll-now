@@ -1,5 +1,7 @@
 {% if include.mainpage %}
 <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+{% else %}
+<div class="small">
 {% endif %}
   
   	<div >
@@ -7,7 +9,7 @@
   	    <h5 id="{{include.hash}}"  class="project-category text-uppercase pl-1">{{ include.title }}</h5>
   	    <p class="text-secondary pl-1 mb-0"><small>{{ include.subtitle }}</small></p>
       {% else %}
-        <p id="strategic"  class="project-category text-uppercase small mt-3 mb-0">{{ include.title }}</p>
+        <p id="strategic"  class="project-category text-uppercase mt-3 mb-0">{{ include.title }}</p>
       {% endif %}
 	</div>
 
@@ -24,5 +26,7 @@
 
 
 {% if include.mainpage %}
+</div>
+{% else %}
 </div>
 {% endif %}

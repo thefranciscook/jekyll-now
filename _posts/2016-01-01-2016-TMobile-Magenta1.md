@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unified premium care for 7 countries, T-Mobile
+title: Pan-European premium care for T&#8209;Mobile
 excerpt: International service design for T-Mobile’s first unified pan-european offering
 category: Strategic
 tags: [international, servicedesign, telecommunications]

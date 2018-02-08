@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Billing service design, T-Mobile
-excerpt: Digital transformation of bill payments across physical and digital channels
+title: Billing digital transformation for T&#8209;Mobile
+excerpt: A 1,5 year long service design project across physical and digital channels
 category: Strategic
 tags: [telecommunications, servicedesign, consulting]
 cta: {label: "Case study video", link: "https://www.youtube.com/watch?v=y_Vlio5fMXk"}

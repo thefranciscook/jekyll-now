@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Realestate developer, website redesign
+title: Website redesign for a real-estate developer
 category: Digital
 excerpt: Case description is coming...
 tags: [draft]
