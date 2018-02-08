@@ -3,6 +3,8 @@ layout: page-default
 ---
 
 <style>
+	
+
 	.header-image-container {
       margin-top: -1rem;
       margin-left: -1rem;
@@ -16,9 +18,20 @@ layout: page-default
       max-height: 250px;
       margin-bottom: 1rem;
     }
+
+    .post-body p, em, li{
+    	 font-family: "Lato", sans-serif !important;
+  font-weight: 400;
+    }
+
+    .post-body em {
+    	padding: .2em;
+    background-color: #fcf8e3;
+    font-style: normal;
+    }
 </style>
 
-<article class="m-3 mb-5">
+<article class="m-3">
 	<div class="header-image-container">
 	  	{% for image in site.static_files %}
 	      {% if image.path contains page.url %}
@@ -36,13 +49,11 @@ layout: page-default
 			<a role="button" class="btn btn-primary mt-1 mb-4 " href="{{ page.cta.link }}" target="blank">{{ page.cta.label }}</a>
 		{% endif %}
 
-		{{ page.content }}
-
-		<p class="text-secondary">{% for tag in page.tags %}<span>#{{ tag }}</span> {% endfor %}</p>
-
-		<div class="float-right">
-			<a role="button" class="btn btn-secondary" data-dismiss="modal" href="../">All client cases</a>
+		<div class="post-body">
+			{{ page.content }}
 		</div>
+
+		<p class="text-secondary mt-4 mb-0">{% for tag in page.tags %}<span>#{{ tag }}</span> {% endfor %}</p>
 	</div>
 </article>
 
