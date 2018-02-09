@@ -1,7 +1,7 @@
 <a href="{{site.baseurl}}{{post.url}}" class="link-unstyled">
   <li class="project media mb-2" style="cursor: pointer;">
     <div class="media-body {% if include.mainpage %}pl-2 pr-0{% else %}text-muted{% endif %}">
-      <p class="mb-0"><small>{{ post.title }}</small></p>
+      <p class="mb-0">{% if page.url == post.url %}👉 {% endif %}<small>{{ post.title }}</small></p>
       <!--<p class="text-secondary mb-0"><small>{{ post.excerpt }}</small></p>-->
     </div>
     {% if include.mainpage %}

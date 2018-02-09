@@ -124,8 +124,47 @@
             <div class="bg-white pb-2 mt-4">
              {{ content }}
             </div>
-            <div class="m-4 text-center">
-              <a role="button" class="btn btn-link" data-dismiss="modal" href="../">Show more client cases</a>
+            <div class="mt-4 mb-4 small">
+
+              <script>
+                document.onkeydown = function (e) { 
+                  e = e || window.event; 
+                  var charCode = (e.charCode) ? e.charCode : e.keyCode;
+
+                  if (charCode == 37) {
+                    {% if page.previous.url %}
+                    document.location.href = "{{site.baseurl}}{{page.previous.url}}";
+                    {% else %}
+                    document.location.href = "{{site.baseurl}}/";
+                    {% endif %}
+                  }
+                  else if (charCode == 39) {
+                    {% if page.next.url %}
+                    document.location.href = "{{site.baseurl}}{{page.next.url}}";
+                    {% else %}
+                    document.location.href = "{{site.baseurl}}/";
+                    {% endif %}
+                  }
+                };
+              </script>
+
+              {% comment %}
+              <div class="PageNavigation row">
+                <div class="col text-left ml-2">
+                  {% if page.previous.url %}
+                    <a class="prev" href="{{site.baseurl}}{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+                  {% endif %}
+                </div>
+                <div class="col text-right mr-2">
+                  {% if page.next.url %}
+                    <a class="next" href="{{site.baseurl}}{{page.next.url}}">{{page.next.title}} &raquo;</a>
+                  {% endif %}
+                </div>
+              </div>
+              <hr class="d-lg-none d-xl-none" />
+              {% endcomment %}
+
+              
             </div>
           </div>
 
