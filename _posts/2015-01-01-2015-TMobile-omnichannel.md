@@ -2,9 +2,8 @@
 layout: post
 title: Omnichannel sales support for T&#8209;Mobile
 category: Strategic
-excerpt: Case description is coming...
+excerpt: Validating a unified sales support concept
 tags: [telecommunications, servicedesign]
-cta: {label: "don't click me", link: "#"}
 ---
 
 🏢 Hungarian Telekom (T-Mobile) serves millions of customers with integrated TV, phone, internet and mobile services. 
