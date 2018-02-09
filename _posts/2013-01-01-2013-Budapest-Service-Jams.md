@@ -20,7 +20,7 @@ cta: {label: "Video", link: "https://vimeo.com/88575025"}
 - 400+ members in our Service Design Budapest facebook group
 - Next year our Ukrainian participant started up Kiev Service Jams 
 
-💙 The thrill of startig some thing new and exciting. Teching people something I’m passionate about. 
+💙 The thrill of starting some thing new and exciting. Teaching people something I’m passionate about. 
 
 💰 Value I brought to the project:
 

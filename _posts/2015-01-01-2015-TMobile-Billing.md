@@ -19,11 +19,11 @@ cta: {label: "Case study video", link: "https://www.youtube.com/watch?v=y_Vlio5f
 - designed and evaluated pilot projects
 - and led the implementation of the new or improved services. 
 
-✌️The solutions improved adoption at key points of the customers’ journey *reducing costs by 1 million dollars annually*:
+✌️The solutions improved adoption at key points of  customer journeys *reducing costs by 1 million dollars annually*:
 
-1. In-store evangelists aproached customers while they were waiting in line at the stores, and had them try online payment on their own devices
+1. In-store evangelists approached customers while they were waiting in line at the stores, and had them try online payment on their own devices
 2. Bill notification emails went out for all customers, with a no-password link to online bill payment
-3. Under banked customers were migrated out of stores to pay their bills at newpaper kiosks and post offices. 
+3. Under banked customers were migrated out of stores to pay their bills at newspaper kiosks and post offices. 
 
 💰Value I brought to the project:
 

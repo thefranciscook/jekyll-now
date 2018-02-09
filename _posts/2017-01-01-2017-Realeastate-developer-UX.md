@@ -17,13 +17,13 @@ cta: {label: "don't click me", link: "#"}
 2. UX design: IA, page flows, functional and high-fi wireframes (Sketch, InVision), workshop between iterations
 3. UI design and brand identity 
 
-✌️ Our client was so satisifed with the results of the project and the opportunities we presented, that they decided to rebuild their website on a new platform to make those feasable.
+✌️ Our client was so satisfied with the results of the project and the opportunities we presented, that they decided to rebuild their website on a new platform to make those feasible.
 
 💙 Real-estate development was a new domain for me. I enjoyed looking behind the curtains, and learn about their business.
 
-💰 As a UX lead I did my fair share in desinging the actual flows and wiframes. In addition *my service design background* helped in two ways:
+💰 As a UX lead I did my fair share in designing the actual flows and wireframes. In addition *my service design background* helped in two ways:
 
-- *Facilitated workshops* made client and stakeholder correspondance a lot more effective, than sending email back-and-forth to reach an agreement.
+- *Facilitated workshops* made client and stakeholder correspondence a lot more effective, than sending email back-and-forth to reach an agreement.
 - *Interviewing sales reps* provided insights on the balance of customer and business needs.
 
-👥 As an independent consultant in partnership with Why Partners, a butique product design agency
+👥 As an independent consultant in partnership with Why Partners, a boutique product design agency

@@ -6,9 +6,9 @@ category: Strategic
 tags: [telecommunications, servicedesign, consulting, international]
 ---
 
-🏢 Deutsche Telekom is Europe’s leading telecommunications provider (T-Mobile’s parent company, 73,1 billion euros in revenue, 50 national companies, 60m customers) 
+🏢 Deutsche Telekom is Europe’s leading telecommunications provider (T-Mobile’s parent company, 73,1 billion Euros in revenue, 50 national companies, 60m customers) 
 
-⚡ Deutsche Telekom approached us to advice them in the delivery of workshop about the future of thier TV offerings, with *Customer Experience Directors participating* from the national companies.
+⚡ Deutsche Telekom approached us to advice them in the delivery of workshop about the future of their TV offerings, with *Customer Experience Directors participating* from the national companies.
 
 💡 I *co-designed and co-facilitated the workshop with DT's innovation team*. 
 

@@ -8,7 +8,7 @@ tags: [telecommunications, servicedesign]
 
 🏢 Hungarian Telekom (T-Mobile) serves millions of customers with integrated TV, phone, internet and mobile services. 
 
-⚡ T-Mobile was curious if they could use their online self-service plaform as a unified sales support tool.
+⚡ T-Mobile was curious if they could use their online self-service platform as a unified sales support tool.
 
 💡 As the business challenge was cross-channel in nature, and it was digital-heavy at the same time, *we designed a process merging Service Design and User Experience approaches*:
 
@@ -16,11 +16,11 @@ tags: [telecommunications, servicedesign]
 
 2. **Involving the stakeholders:** We had set up a *project team with representatives from the 10+ affected client departments* and all sales channels including sales representatives.
 
-3. **Developing a shared understanding:** We immersed the team in the context sales reps currently work and which cusomters face day-to-day. *Participants visited stores and after a short observation, they themselves started to serve real customers using the current sales support tools.* Returning from the field, we facilitated short workshops to record their fresh insights on the feasability of the proposed unified sales support tool.
+3. **Developing a shared understanding:** We immersed the team in the context sales reps currently work and which customers face day-to-day. *Participants visited stores and after a short observation, they themselves started to serve real customers using the current sales support tools.* Returning from the field, we facilitated short workshops to record their fresh insights on the feasibility of the proposed unified sales support tool.
 
 4. **Testing prototypes in context:** *Team members visited stores, and served customers with the current online self-service tool.* Returning from the field, we recorded their insights on how fit is the current self-service tool for the task, and the opportunities for improvement they see.
 
-5. **Synthesizing research indings:** On workshops we mapped the opportunities and barriers from the company’s, the sales representatives’ and the customers’ perspective. The challenges revolved around sales channel tensions, IT feasibility issues and on how to support agents with sensitive customer data like churn status in a consultative sales situation.
+5. **Synthesizing research findings:** On workshops we mapped the opportunities and barriers from the company’s, the sales representatives’ and the customers’ perspective. The challenges revolved around sales channel tensions, IT feasibility issues and on how to support agents with sensitive customer data like churn status in a consultative sales situation.
 
 6. **Concepting workshops:** To demonstrate the feasibility of online self-care as a unified sales support tool *we developed service concepts for the two transactions* in scope.
 

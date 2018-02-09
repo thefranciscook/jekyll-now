@@ -15,18 +15,18 @@ cta: {label: "Payment FAQ page", link: "https://www.telekom.hu/lakossagi/ugyinte
 It was a solo project, where *I was responsible for every aspect of the project* from budgeting, through client correspondence to the actual design work to be done:
 
 - Project management: client correspondence, scoping, budgeting, time management
-- Research: stakeholder maping and interviews, mapping business and user needs, collecting use-cases and documenting UX specification
+- Research: stakeholder mapping and interviews, mapping business and user needs, collecting use-cases and documenting UX specification
 - UX Design: designing information architecture, page flows, functional wireframes (Axure)
-- Implementation support: managing UI desinger and site build contractors, functional specification for the clinet's implementation vendors
+- Implementation support: managing UI designer and site build contractors, functional specification for the client's implementation vendors
 
 ✌️ The module shipped on time. *As a result millions of customers could pay their orders and bills on their mobile.* 
 
-💙 I loved the impact of my work: bill payment was among the redesigned payment transactions, affecting millions of cutomers - including my friends and family.
+💙 I loved the impact of my work: bill payment was among the redesigned payment transactions, affecting millions of customers - including my friends and family.
 
 💰 Value I brought to the table:
 
 - Years of UX experience, proficiency with the tools of trade
-- Business bacground, from my past Product Manager role
+- Business background, from my past Product Manager role
 - Confident use of the design process, stemming from my service design background
 - Consulting skills, client correspondence, stakeholder mapping 
 

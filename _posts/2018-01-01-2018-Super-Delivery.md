@@ -19,8 +19,8 @@ cta: {label: "Website", link: "http://investor.superdelivery.ai"}
 
 - Experience in working with early-stage startups
 - Being a partner for the founder, to have someone to bounce ideas off
-- Familiarity with the tech involved (VR, AI) as an enigneer
-- Rapid prototyping/experimentation mentality from my service design experience
+- Familiarity with the tech involved (VR, AI) as an engineer
+- Rapid prototyping / experimentation mentality from my service design experience
 - Organizing offsites and workshops for the team to develop a shared vision 
 
 💙 I loved the constant, rapid move from strategy to implementation and back. It was empowering to reconnect with my inner geek. 
