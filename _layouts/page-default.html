@@ -86,29 +86,24 @@
 
   <body class="bg-light">
     
-      <div id="main" role="main" class="container ">
+      <div class="p-2 pl-3 m-0 bg-dark text-muted d-lg-none d-xl-none">
+        <a href="{{site.baseurl}}/" class="link-unstyled m-0"><h4 class="text-uppercase m-0">Francis Cook</h4></a>
+      </div>
+
+      <div id="main" role="main" class="container">
+
         <div class="row">
 
-          <div class="order-lg-1 order-md-2 order-sm-2 order-xs-2 order-2 col-xs-12 col-sm-12 col-md-12 col-lg-3 mt-3 mb-4">
+          <!-- Sidebar -->
+          <div class="order-lg-1 order-md-2 order-sm-2 order-xs-2 order-2 col-xs-12 col-sm-12 col-md-12 col-lg-3 mt-lg-3 mt-xl-3 mb-4">
 
             <div >
-              <div class="mb-4">
-                <a href="{{site.baseurl}}/" class="link-unstyled"><h4 class="text-uppercase">Francis Cook</h4></a>
 
-                <p class="text-secondary small">Strategic Designer based in Toronto. <br />I make startups grow 🚀 and dinosaurs dance 🦖.</p>
+              {% include project-sidebar-header.html contactsVisible=false %}
               
-                <div class="text-secondary small">
-                  <a href="tel:+1-647-558-4955">+1-647-558-4955</a><br />
-                  <a href="mailto:hello@franciscook.com">hello@franciscook.com</a>
-                  <br />
-                  <span class="text-secondary">
-                    <a href="http://www.linkedin.com/in/thefranciscook" target="_blank">LinkedIn</a> /
-                    <a href="http://www.twitter.com/thefranciscook" target="_blank">Twitter</a> /
-                    <a href="http://www.github.com/thefranciscook" target="_blank">GitHub</a>
-                  </span>
-                </div>
-              </div>
               <div class="pr-2">
+
+                <h6 class="text-muted d-lg-none d-xl-none">Client cases</h6>
                 
                    {% include project-list.html category=site.categories.Strategic title="Service innovation" subtitle="Service Design / Innovation Consulting" %}
                   
@@ -120,12 +115,15 @@
             </div>
           </div>
           
-          <div class="order-lg-2 order-md-1 order-sm-1 order-xs-1 order-1 col-xs-12 col-sm-12 col-md-12 col-lg-7">
-            <div class="bg-white pb-2 mt-4">
+          <!-- Main -->
+          <div class="order-lg-2 order-md-1 order-sm-1 order-xs-1 order-1 col-xs-12 col-sm-12 col-md-12 col-lg-7 ">
+            <div class="bg-white pb-2 mt-lg-4 mt-xl-4">
              {{ content }}
             </div>
             <div class="mt-4 mb-4 small">
 
+            
+              {% comment %}
               <script>
                 document.onkeydown = function (e) { 
                   e = e || window.event; 
@@ -147,8 +145,6 @@
                   }
                 };
               </script>
-
-              {% comment %}
               <div class="PageNavigation row">
                 <div class="col text-left ml-2">
                   {% if page.previous.url %}
