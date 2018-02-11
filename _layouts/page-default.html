@@ -86,8 +86,20 @@
 
   <body class="bg-light">
     
-      <div class="p-2 pl-3 m-0 text-muted d-lg-none d-xl-none">
-        <a href="{{site.baseurl}}/" class="link-unstyled m-0"><h4 class="text-uppercase m-0">Francis Cook</h4></a>
+      <div class="p-2 pl-3 m-0 text-muted d-lg-none d-xl-none clearfix">
+        <div class="float-left">
+          <a href="{{site.baseurl}}/" class="link-unstyled m-0"><h4 class="text-uppercase m-0">Francis Cook</h4></a>
+        </div>
+
+        <div class="float-right small pt-1">
+            {% if page.previous.url %}
+            <span><a class="prev" href="{{site.baseurl}}{{page.previous.url}}">&laquo; Previous case</a></span>
+            {% endif %}
+            <span> | </span>
+            {% if page.next.url %}
+            <span><a class="next" href="{{site.baseurl}}{{page.next.url}}">Next case &raquo;</a></span>
+            {% endif %}
+        </div>
       </div>
 
       <div id="main" role="main" class="container">
@@ -157,6 +169,7 @@
                   {% endif %}
                 </div>
               </div>
+
               <hr class="d-lg-none d-xl-none" />
               {% endcomment %}
 

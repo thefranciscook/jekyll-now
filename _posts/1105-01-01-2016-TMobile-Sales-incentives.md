@@ -5,6 +5,7 @@ excerpt: Digital transformation of bill payments across physical and digital cha
 category: Strategic
 tags: [telecommunications, servicedesign, consulting]
 cta: {label: "Case-study video", link: "https://www.youtube.com/watch?v=ktNnXqW93t0"}
+year: 2016
 ---
 
 🏢 Hungarian Telekom (T-Mobile) serves millions of customers with integrated TV, phone, internet and mobile services. 

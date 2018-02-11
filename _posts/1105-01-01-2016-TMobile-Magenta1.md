@@ -5,6 +5,7 @@ excerpt: International service design for T-Mobile’s first unified pan-europea
 category: Strategic
 tags: [international, servicedesign, telecommunications]
 cta: {label: "Press release", link: "https://www.telekom.com/en/company/details/magenta-one-europe-wide-363356"}
+year: 2016
 ---
 
 🏢 Deutsche Telekom (DT, T-Mobile’s parent co.) is Europe’s leading telecommunications provider (73,1 billion euros in revenue, 50 national companies, 60, customers) 

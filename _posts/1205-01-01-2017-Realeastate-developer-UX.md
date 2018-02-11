@@ -5,6 +5,7 @@ category: Digital
 excerpt: How we desinged an online presence for
 tags: [UX, realestate]
 cta: {label: "don't click me", link: "#"}
+year: 2017
 ---
 
 🏢 Our client was one of *the top 20 largest property developers* in Europe.

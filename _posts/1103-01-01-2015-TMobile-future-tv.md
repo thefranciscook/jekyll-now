@@ -4,6 +4,7 @@ title: Future of TV experience workshop for T&#8209;Mobile
 excerpt: Designed and facilitated a workshop for a group of Customer Experience Directors from 7 countries
 category: Strategic
 tags: [telecommunications, servicedesign, consulting, international]
+year: 2015
 ---
 
 🏢 Deutsche Telekom is Europe’s leading telecommunications provider (T-Mobile’s parent company, 73,1 billion Euros in revenue, 50 national companies, 60m customers) 

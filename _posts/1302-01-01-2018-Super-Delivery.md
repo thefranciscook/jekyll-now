@@ -5,6 +5,7 @@ excerpt: Advising an early-stage startup disrupting the last-mile delivery marke
 category: Newtech
 tags: [innovation, consulting, startup]
 cta: {label: "Website", link: "http://investor.superdelivery.ai"}
+year: 2018
 ---
 
 🏢 SuperDelivery.ai, a *team of veteran professionals with 10+ years experience* in the world of global finance / US startups / IoT product companies. 

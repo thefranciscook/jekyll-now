@@ -5,6 +5,7 @@ category: Digital
 excerpt: Solo UX consultancy project to enable millions of customers to pay for T&#8209;Mobile's services on their phone.
 tags: [telecommunications, UX, consultancy]
 cta: {label: "Payment FAQ page", link: "https://www.telekom.hu/lakossagi/ugyintezes/elerhetosegek/telekom-alkalmazas"}
+year: 2015
 ---
 
 🏢 Hungarian Telekom (T-Mobile) serves millions of customers with integrated TV, phone, internet and mobile services. 

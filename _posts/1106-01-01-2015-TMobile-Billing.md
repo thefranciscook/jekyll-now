@@ -5,6 +5,7 @@ excerpt: A 1,5 year long service design project across physical and digital chan
 category: Strategic
 tags: [telecommunications, servicedesign, consulting]
 cta: {label: "Case study video", link: "https://www.youtube.com/watch?v=y_Vlio5fMXk"}
+year: 2015
 ---
 
 🏢 Hungarian Telekom (T-Mobile) serves millions of customers with integrated TV, phone, internet and mobile services. 
