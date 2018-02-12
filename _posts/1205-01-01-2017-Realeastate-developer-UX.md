@@ -2,7 +2,7 @@
 layout: post
 title: Website redesign for a real-estate developer
 category: Digital
-excerpt: How we desinged an online presence for
+excerpt: Increasing online leads by simplification
 tags: [UX, realestate]
 year: 2017
 ---
