@@ -140,10 +140,11 @@ layout: page-default
 				swipedetect(mainEl, function(swipedir){
 				    // swipedir contains either "none", "left", "right", "top", or "down"
 				    if(swipedir == "left"){
-				    	navigateToNextPost();
+				    	navigateToPreviousPost();
 				    }
 				    else if(swipedir == "right"){
-				    	navigateToPreviousPost();
+				    	
+				    	navigateToNextPost();
 				    }
 				});
 
