@@ -4,7 +4,6 @@ title: Website redesign for a real-estate developer
 category: Digital
 excerpt: How we desinged an online presence for
 tags: [UX, realestate]
-cta: {label: "don't click me", link: "#"}
 year: 2017
 ---
 
