@@ -45,8 +45,10 @@ layout: page-default
 	    {% endfor %}
 	</div>
 	<div class="pl-3 pr-3 pb-3">
-		<p class="text-uppercase"><small class="text-muted">{{ page.category }}, {{ page.year }}</small></p>
-			<h4 class="modal-title">{{ page.title }}</h4>
+		
+    <p class="text-uppercase"><small class="text-muted">{{ page.category }}, {{ page.year }}</small></p>
+		
+    <h4 class="modal-title">{{ page.title }}</h4>
 
 		{% if page.excerpt %}	
 		<p class="lead">{{ page.excerpt }}</p>
@@ -62,14 +64,15 @@ layout: page-default
 			{% endif %}
 
 			<div class="float-right btn-group" role="group">
-	            {% if page.previous.url %}
-	            <a class="prev btn btn-secondary" role="button"  href="{{site.baseurl}}{{page.previous.url}}">⇦</a>
-	            {% endif %}
-	            {% if page.next.url %}
-	            <a class="next btn btn-secondary" role="button"  href="{{site.baseurl}}{{page.next.url}}">⇨</a>
-	            {% endif %}
-        	</div>
-        	<script>
+        {% if page.previous.url %}
+        <a class="prev btn btn-secondary" role="button"  href="{{site.baseurl}}{{page.previous.url}}">⇦</a>
+        {% endif %}
+        {% if page.next.url %}
+        <a class="next btn btn-secondary" role="button"  href="{{site.baseurl}}{{page.next.url}}">⇨</a>
+        {% endif %}
+    	</div>
+    	
+      <script>
 
 				var navigateToPreviousPost = function(){
 					{% if page.previous.url %}
@@ -88,22 +91,21 @@ layout: page-default
 				}
 
 
-        		// Keyboard navigation
-                document.onkeydown = function (e) { 
-                  e = e || window.event; 
-                  var charCode = (e.charCode) ? e.charCode : e.keyCode;
+    		// Keyboard navigation
+        document.onkeydown = function (e) { 
+          e = e || window.event; 
+          var charCode = (e.charCode) ? e.charCode : e.keyCode;
 
-                  if (charCode == 37) {
-                    navigateToPreviousPost();
-                  }
-                  else if (charCode == 39) {
-                    navigateToNextPost();
-                  }
-                };
-              </script>
+          if (charCode == 37) {
+            navigateToPreviousPost();
+          }
+          else if (charCode == 39) {
+            navigateToNextPost();
+          }
+        };
+      </script>
 
-        </div>
-      </div>
+    </div>
 
 		<div class="post-body ">
 			{{ page.content }}
