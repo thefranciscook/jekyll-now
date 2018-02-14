@@ -9,7 +9,7 @@ cta: {label: "Video", link: "https://vimeo.com/88575025"}
 
 🏢 One special weekend people interested in *service and customer experience* will meet at locations all over the globe. In a spirit of experimentation, innovation, co-operation and friendly competition, teams will have less than *48 hours to develop and prototype* completely new services inspired by a shared theme. 
 
-⚡ Returning after my service design course in London, I connected with the local service designers (all 3 at that time), and as our first project we organized out first jam. 
+⚡ Returning after my service design course in London, I connected with the local service designers (all 3 at that time), and as our first project we organized our first jam. 
 
 💡 We *designed, organized and facilitated the jams*. Mentored participants to get the most out of the event. 
 
@@ -18,9 +18,9 @@ cta: {label: "Video", link: "https://vimeo.com/88575025"}
 - Introduced service design and design thinking to the local startup scene
 - 700+ followers on our Facebook page 
 - 400+ members in our Service Design Budapest facebook group
-- Next year our Ukrainian participant started up Kiev Service Jams 
+- The next year our Ukrainian participant started up Kiev Service Jams 
 
-💙 The thrill of starting some thing new and exciting. Teaching people something I’m passionate about. 
+💙 The thrill of starting something new and exciting. Teaching people something I’m passionate about. 
 
 💰 Value I brought to the project:
 

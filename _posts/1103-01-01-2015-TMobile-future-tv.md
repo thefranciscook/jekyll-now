@@ -9,12 +9,12 @@ year: 2015
 
 🏢 Deutsche Telekom is Europe’s leading telecommunications provider (T-Mobile’s parent company, 73,1 billion Euros in revenue, 50 national companies, 60m customers) 
 
-⚡ Deutsche Telekom approached us to advice them in the delivery of workshop about the future of their TV offerings, with *Customer Experience Directors participating* from the national companies.
+⚡ Deutsche Telekom approached us to advise them in the delivery of workshop about the future of their TV offerings, with *Customer Experience Directors participating* from the national companies.
 
 💡 I *co-designed and co-facilitated the workshop with DT's innovation team*. 
 
-* We followed a base-journey approach, where we first mapped a journey based on the core value proposition, and later marked the parts specific for various customer segment. 
-* We relied on the participants expertise as customer advocates, as there was no budget for research. 
+* We followed a base-journey approach, where we first mapped a journey based on the core value proposition, and later marked the parts specific for various customer segments. 
+* We relied on the participants' expertise as customer advocates, as there was no budget for research. 
 
 ✌️ The workshop served as an inspiration for a follow-up large scale project. 
 

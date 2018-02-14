@@ -19,7 +19,7 @@ year: 2015
 
 3. **Developing a shared understanding:** We immersed the team in the context sales reps currently work and which customers face day-to-day. *Participants visited stores and after a short observation, they themselves started to serve real customers using the current sales support tools.* Returning from the field, we facilitated short workshops to record their fresh insights on the feasibility of the proposed unified sales support tool.
 
-4. **Testing prototypes in context:** *Team members visited stores, and served customers with the current online self-service tool.* Returning from the field, we recorded their insights on how fit is the current self-service tool for the task, and the opportunities for improvement they see.
+4. **Testing prototypes in context:** *Team members visited stores, and served customers with the current online self-service tool.* Returning from the field, we recorded their insights on how fit the current self-service tool is for the task, and the opportunities for improvement they see.
 
 5. **Synthesizing research findings:** On workshops we mapped the opportunities and barriers from the company’s, the sales representatives’ and the customers’ perspective. The challenges revolved around sales channel tensions, IT feasibility issues and on how to support agents with sensitive customer data like churn status in a consultative sales situation.
 

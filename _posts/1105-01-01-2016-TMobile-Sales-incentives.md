@@ -14,9 +14,9 @@ year: 2016
 
 💡 Together with the client’s project team we solved the problem in four steps:
 
-1. Explored the problem from both the *sales representatives’ and both the customers’ perspective* through contextual inquiries and workshops.
+1. Explored the problem from both the *sales representatives’ and the customers’ perspective* through contextual inquiries and workshops.
 2. Created a new *gamification based incentive program* targeted for educational goals.
-3. *Tested the new inventive system at an 80 person workshop*, where store managers could experience the new incentive system as a game. Their input was important both as important stakeholders, both as gatekeepers to sales representatives.
+3. *Tested the new inventive system at an 80 person workshop*, where store managers could experience the new incentive system as a game. Their input was important both as important stakeholders, and as gatekeepers to sales representatives.
 4. Supported the implementation of the digital platform supporting the new program, and the organizational changes needed to introduce it. Some of the KPIs were measured by us using surveys and interviews. 
 
 ✌️ The new gamification based incentive system reached wide adoption among the sales representatives, and proved to be an effective new leg in our client’s incentive system. 

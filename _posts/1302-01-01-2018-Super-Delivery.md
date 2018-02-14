@@ -14,7 +14,7 @@ year: 2018
 
 💡 Together with the founders we designed a series of research activities, workshops, offsites and prototyping rounds to *validate the need and develop a shared vision*. 
 
-✌️ Meeting with reality, the concept changed dramatically several times, and finally a strong shared vision emerged. This enabled the team to move forward with their patents and investor pitches. 
+✌️ Meeting reality, the concept changed dramatically several times, and finally a strong shared vision emerged. This enabled the team to move forward with their patents and investor pitches. 
 
 💰 Value I brought to the project:
 
