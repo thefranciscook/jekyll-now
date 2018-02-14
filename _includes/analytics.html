@@ -16,7 +16,7 @@
       // GOOGLE ANALYTICS CTA TRACKING
       // -----------------------------
       $('.cta').click(function() {
-        var text = '{{ page.url }}' + ' ' + $(this).text();
+        var text = 'CTA: {{ page.url }}' + ' ' + $(this).text();
         if(ga){
         	console.log(text);
           ga('send', 'event', 'Button', 'Click', text);
