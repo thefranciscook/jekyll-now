@@ -131,77 +131,9 @@
         }
 
 </style>
-
-    <script type="text/javascript">
-
-      // lodal modal on load
-      $(function(){
-          if(window.location.hash) {
-              var hash = window.location.hash;
-              if(hash !== '#digital' && hash !== '#fun' && hash !== '#strategic' && hash != '#contact' && hash != '#newtech')
-              {
-              $(hash).modal('toggle');
-              }
-              else{}
-          }
-      });
-
-      // updates hash on modal
-      $(document).ready(function () {
-           $('.modal').on('show.bs.modal', function (e) {
-               if (typeof (e.relatedTarget) != "undefined") {
-                   window.location.hash = $(e.relatedTarget).data('target');
-               } 
-           });
-
-           $('.modal').on('hide.bs.modal', function (e) {
-               
-                   if ( window.history && window.history.pushState ) { 
-                        window.history.pushState('', '', window.location.pathname) 
-                    } else { 
-                        window.location.href = window.location.href.replace(/#.*$/, '#'); 
-                    }
-                
-           });
-      });
-
-    </script>
-
-
-
-
   </head>
 
   <body>
-
-    <!-- 
-      <nav id="top-navbar" class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-        
-
-
-      <a class="navbar-brand" href="#">
-        <img src="./images/avatar.jpg" class="rounded-circle"  width="30" height="30" alt="">
-      </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#strategic">Strategic</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#digital">Digital</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#fun">Fun</a>
-            </li>
-          </ul>
-        </div>
-        <a class="btn btn-danger my-2 my-sm-0" href="#contact">Contact</a>
-      </nav>
-    -->
     
       <div id="main" role="main" class="container">
 
@@ -215,7 +147,6 @@
             <br /> I make startups grow<span id="rocket"> 🚀</span> and dinosaurs dance<span id="dino"> 🦖</span>.</p>
             <script>
               if(!ifEmoji('🦖')){
-                  //TODO hide rocket and dino
                   e_rocket = document.getElementById("rocket");
                   e_dino = document.getElementById("dino");
 
@@ -228,13 +159,13 @@
             </script>
 
             <div id="contact">
-                <a href="tel:+1-647-558-4955">+1-647-558-4955</a><br />
-                <a href="mailto:hello@franciscook.com">hello@franciscook.com</a>
+                <a class="cta" href="tel:+1-647-558-4955">+1-647-558-4955</a><br />
+                <a class="cta" href="mailto:hello@franciscook.com">hello@franciscook.com</a>
                 <br />
                 <span class="text-secondary">
-                  <a href="http://www.linkedin.com/in/thefranciscook" target="_blank">LinkedIn</a> /
-                  <a href="http://www.twitter.com/thefranciscook" target="_blank">Twitter</a> /
-                  <a href="http://www.github.com/thefranciscook" target="_blank">GitHub</a>
+                  <a class="cta" href="http://www.linkedin.com/in/thefranciscook" target="_blank">LinkedIn</a> /
+                  <a class="cta"  href="http://www.twitter.com/thefranciscook" target="_blank">Twitter</a> /
+                  <a class="cta"  href="http://www.github.com/thefranciscook" target="_blank">GitHub</a>
                 </span>
             </div>
           </div>
