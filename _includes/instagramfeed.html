@@ -1,0 +1,13 @@
+<script type="text/javascript" src="{{site.baseurl}}/js/instafeed.js"></script>
+
+<script>
+var feed = new Instafeed({
+  get: 'user',
+  userId: '23543667',
+  clientId: '0c11894e4d044fabb4dd33caefee6334',
+  filter: function(image) {
+    return image.tags.indexOf('TAG_NAME') >= 0;
+  }
+});
+feed.run();
+</script>
