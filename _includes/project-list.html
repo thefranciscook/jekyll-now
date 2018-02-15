@@ -16,7 +16,8 @@
   <div class="bg-light pb-1">
     <ul class="list-unstyled">
       <li class="dropdown-divider"></li>
-      {% for post in include.category %}
+      {% assign categoryReversed = include.category | reverse %}
+      {% for post in categoryReversed %}
         {% if post.url %}
           {% include project-list-item3.html mainpage=include.mainpage %}
         {% endif %}
