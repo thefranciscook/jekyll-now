@@ -1,25 +1,18 @@
 ---
 layout: null
 ---
-
-
 {% assign paragraphs = content | newline_to_br | split: '<br />' %}
 {% for paragraph in paragraphs %}
 	{% if forloop.last == true %}
 		{% comment %}do nothing{% endcomment %}
 	{% else %}
         <div class="carousel-item h-100 {% if page.order == 1 %}active{% endif %}">
-			{% assign urlAndDescription = paragraph | split: ' ; ' %}
+			{% assign slideData = paragraph | split: ': ' %}
 			<div class="carousel-caption" style="background-color: rgba(0,0,0,.75)">
-				<h5>Step title</h5>
-				{{ urlAndDescription[1] }}
+				<h5>{{ slideData[0]  | strip_html }}</h5>
+				<p>{{ slideData[1]  | strip_html }}</p>
 			</div>
-			<img class="d-block w-100 h-100" src="/{{site.baseurl}}images/{{page.case}}/case/{{ urlAndDescription[0] | strip_html }}" alt="{{ urlAndDescription[1] | strip_html }}"></img>
+			<img class="d-block w-100 h-100" src="/{{site.baseurl}}images/{{page.case}}/case/{{ forloop.index0 | plus: page.imageIndex }}.jpeg" alt="{{ urlAndDescription[0] | strip_html }}"></img>
 		</div>
     {% endif %}
 {% endfor %}
-
-
-
-
-	
