@@ -1,0 +1,10 @@
+---
+layout: null
+---
+<div class="carousel-item h-100 {% if page.order == 1 %}active{% endif %}">
+    <img class="d-block w-100 h-100" src="{{ page.imageUrl }}" alt="{{ page.title }}"></img>
+    <div class="carousel-caption d-none d-md-block">
+    	<h5>{{page.title}}</h5>
+    	{{ content }}
+  	</div>
+</div>
