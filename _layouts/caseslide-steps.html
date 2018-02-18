@@ -9,8 +9,10 @@ layout: null
         <div class="carousel-item h-100 {% if page.order == 1 %}active{% endif %}">
 			{% assign slideData = paragraph | split: ': ' %}
 			<div class="carousel-caption" style="background-color: rgba(0,0,0,.75)">
-				<h5>{{ slideData[0]  | strip_html }}</h5>
-				<p>{{ slideData[1]  | strip_html }}</p>
+				<p>
+					<span style="font-weight: 400">{{ slideData[0]  | strip_html }}:</span>
+					<span style="font-weight: 200">{{ slideData[1]  | strip_html }}</span>
+				</p>
 			</div>
 			<img class="d-block w-100 h-100" src="/{{site.baseurl}}images/{{page.case}}/case/{{ forloop.index0 | plus: page.imageIndex }}.jpeg" alt="{{ urlAndDescription[0] | strip_html }}"></img>
 		</div>
