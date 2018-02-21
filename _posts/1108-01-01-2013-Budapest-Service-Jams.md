@@ -5,6 +5,7 @@ excerpt: The first Hungarian service design community
 category: Strategic
 tags: [servicedesign, international]
 cta: {label: "Video", link: "https://vimeo.com/88575025"}
+year: 2013
 ---
 
 🏢 One special weekend people interested in *service and customer experience* will meet at locations all over the globe. In a spirit of experimentation, innovation, co-operation and friendly competition, teams will have less than *48 hours to develop and prototype* completely new services inspired by a shared theme. 

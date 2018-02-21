@@ -11,6 +11,7 @@ layout: page-default
       margin-right: -1rem;
       margin-bottom: 1rem;
       background-color: black;
+      max-height: 250px;
     }
 
     .header-image-container img {
@@ -39,7 +40,10 @@ layout: page-default
 	<div class="header-image-container">
 	  	{% for image in site.static_files %}
 	      {% if image.path contains page.url %}
-	       <img src="../{{image.path}}" alt="Card image cap"></img>
+          {% if image.path contains 'thumb' %}
+          {% else %}
+	          <img src="../{{image.path}}" alt="Card image cap"></img>
+          {% endif %}
 	       {% break %}
 	      {% endif %}
 	    {% endfor %}

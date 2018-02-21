@@ -6,7 +6,7 @@
     </div>
     {% if include.mainpage %}
     {% for image in site.static_files %}
-      {% if image.path contains post.url %}
+      {% if image.path contains post.url and image.path contains 'thumb' %}
           <img class="ml-3" src="{{site.baseurl}}{{image.path}}" alt="{{ post.title }}" style="width: 64px; height: 64px; object-fit: cover;"></img> 
       {% break %} 
       {% endif %}
