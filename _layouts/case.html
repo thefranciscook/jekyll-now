@@ -184,9 +184,7 @@ layout: null
                 <div class="media">
                   <img class="mr-1" src="{{thumbUrl}}" style="width: 1rem; height: 1rem; object-fit: cover;" alt="Generic placeholder image">
                   <div class="media-body">
-                    <p class="small">
-                    {{page.title}}
-                  </p>
+                    <p class="small">{{page.title}}</p>
                   </div>
                 </div>
 
@@ -199,18 +197,30 @@ layout: null
                   {% assign caseSlideIndex = 1 %}
                   {% for slide in site.caseslides %}
                     {% if slide.case == page.case %}
-                      {% if slide.layout == "caseslide-steps" %}
-                        {% assign total_paragraphs = slide.content | newline_to_br | split: '<br />' | size | minus: 1 %}
-                        {% for paragraphIndex in (1..total_paragraphs) %}
+                      {% if slide.layout == "caseslide-emojisteps" %}
+                        {% assign emojisteps = slide.content | split: '(BLOCK)' | size %}
+                          {% for emojistep in (1..emojisteps) %}
+                            <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
+                            {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
+                          {% endfor %}
+                      {% else %}
+                        {% if slide.layout == "caseslide-steps" %}
+                          {% assign total_paragraphs = slide.content | newline_to_br | split: '<br />' | size | minus: 1 %}
+                          {% for paragraphIndex in (1..total_paragraphs) %}
+                            <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
+                            {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
+                          {% endfor %}
+                        {% else %}
                           <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
                           {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
-                        {% endfor %}
-                      {% else %}
-                        <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
-                        {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
+                        {% endif %}
                       {% endif %}
                     {% endif %}
                   {% endfor %}
+                  {% if page.cta %}
+                    <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
+                    {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
+                  {% endif %}
                   {% assign lastSlideIndex = caseSlideIndex | minus: 1 %}
                 </ol>
 
@@ -236,6 +246,23 @@ layout: null
         							{{slide.output}}
         						{% endif %}
         					{% endfor %}
+
+                  <!-- TODO if cta, tah cta slide -->
+                  {% if page.cta %}
+                    <div class="carousel-item h-100">
+                      <div class="d-flex h-100 v-100 text-dark justify-content-center ">
+                        <div class="title-box d-flex flex-column justify-content-center align-self-center p-3">
+                          <a class=" align-self-center mt-3" style="width: 50%; height: 50%;"  href="{{page.cta.link}}" target="_blank" >
+                            <img src="{{thumbUrl}}" style="width: 100%; height: 100%; object-fit: cover;">
+                          </a>
+
+                          <a class="btn btn-primary align-self-center mt-3 pl-5 pr-5" href="{{page.cta.link}}" role="button" target="_blank" >
+                              <span>{{page.cta.label}}</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
 
       			    </div>
 

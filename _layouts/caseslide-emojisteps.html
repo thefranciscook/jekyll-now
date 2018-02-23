@@ -1,0 +1,22 @@
+---
+layout: null
+---
+
+{% assign blocks = content | split: '(BLOCK)'  %}
+{% for block in blocks %}
+	<div class="carousel-item h-100">
+		
+		<div class="d-flex h-100 v-100 text-dark justify-content-center "><!-- d-none d-md-block -->
+			<div class="title-box d-flex flex-column justify-content-center align-self-center p-3">
+				<h1 class="align-self-center text-uppercase">{{ block | strip_html | strip | slice: 0,1 }}</h1>
+				<p>{{ block | remove: "<p>" | remove: "</p>" | lstrip | slice: 1, block.size }}</p>
+			</div>
+		</div>
+	</div>
+{% endfor %} 
+
+
+
+
+
+
