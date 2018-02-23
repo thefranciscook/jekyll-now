@@ -52,7 +52,7 @@ layout: null
       }
 
       html {
-        zoom: 150%;
+        zoom: 120%;
       }
 
       .carousel {overflow:hidden}
@@ -81,34 +81,163 @@ layout: null
       }
 
       .carousel-control-prev-icon {
+        display: none;
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
       }
 
       .carousel-control-next-icon {
+        display: none;
           background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
       }
 
+      .carousel-indicators {
+          bottom: auto !important;
+          top: .2rem;
+          margin-left: 0;
+          margin-right: 0;
+      }
+
+      .carousel-indicators .active {
+          background-color: #007bff;
+      }
+
+      .carousel-indicators li {
+          background-color: rgba(0,0,0,.1);
+          margin-right: .1rem;
+          margin-left: .1rem;
+      }
+
+      .carousel-control-prev {
+        width: 33%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .carousel-control-next {
+        width: 33%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .case-close {
+        position: absolute;
+        top: .9rem;
+        right: 1rem;
+        z-index: 6;
+      }
+
+      .case-info {
+        position: absolute;
+        left: .5rem;
+        top: 1rem;
+      }
 		
     </style>
 
   </head>
+
+  {% assign currentIndex = null %}
+    {% assign currentCase = null %}
+    {% assign previousCase = null %}
+    {% assign nextCase = null %}
+
+    {% for case in site.cases %}
+
+      {% if currentCase != null %}
+        {% assign nextCase = case %}
+        {% break %}
+      {% endif %}
+
+      {% if page.url == case.url %}
+        {% assign currentCase = case %}
+        {% assign currentIndex = forloop.index %}
+      {% endif %}
+
+      {% if currentCase == null %}
+        {% assign previousCase = case %}
+      {% endif %}
+
+    {% endfor %}
 
   <body>
       <div id="main" role="main" class="d-flex flex-column h-100">
       	<!--<h1>{{ page.title }}</h1>-->
       	<div class="h-100">
 
+          <a class="case-close close" aria-label="Close" href="{{site.url}}{{site.baseurl}}">
+            <span aria-hidden="true">&times;</span>
+          </a>
+
           	<div id="caseCarousel" class="carousel h-100" data-ride="carousel" data-interval="false">
 
-			    <div class="carousel-inner h-100">
+              <div class="case-info">
+                {% for image in site.static_files %}
+                  {% assign imageLower = image.path | downcase %}
+                  {% assign pageLower = page.case | downcase %}
+                  {% assign thumbUrl = null %}
+                  {% if imageLower contains pageLower and image.path contains 'thumb' %}
+                      {% assign thumbUrl = site.baseurl | append: image.path %}
+                  {% break %} 
+                  {% endif %}
+                {% endfor %}  
 
-			    	{% for slide in site.caseslides %}
-						{% if slide.case == page.case %}
-							{{slide.output}}
-						{% endif %}
-					{% endfor %}
+                <div class="media">
+                  <img class="mr-1" src="{{thumbUrl}}" style="width: 1rem; height: 1rem; object-fit: cover;" alt="Generic placeholder image">
+                  <div class="media-body">
+                    <p class="small">
+                    {{page.title}}
+                  </p>
+                  </div>
+                </div>
 
-			    </div>
+              </div>
+
+                
+
+                <ol class="carousel-indicators">
+                  <li data-target="#caseCarousel" data-slide-to="0" class="active"></li>
+                  {% assign caseSlideIndex = 1 %}
+                  {% for slide in site.caseslides %}
+                    {% if slide.case == page.case %}
+                      {% if slide.layout == "caseslide-steps" %}
+                        {% assign total_paragraphs = slide.content | newline_to_br | split: '<br />' | size | minus: 1 %}
+                        {% for paragraphIndex in (1..total_paragraphs) %}
+                          <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
+                          {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
+                        {% endfor %}
+                      {% else %}
+                        <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
+                        {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                  {% assign lastSlideIndex = caseSlideIndex | minus: 1 %}
+                </ol>
+
+                
+
+      			    <div class="carousel-inner h-100">
+
+                  <!-- case title slide -->
+                  <div class="carousel-item h-100 active">
+                    <div class="d-flex h-100 v-100 text-dark justify-content-center ">
+                      <div class="title-box d-flex flex-column justify-content-center align-self-center p-3">
+                        <h3 class="align-self-center text-uppercase">{{page.title}}</h3>
+                        <p>{{ page.excerpt }}</p>
+                        <a class="btn btn-primary align-self-center mt-3 pl-5 pr-5" href="#caseCarousel" role="button" data-slide="next">
+                            <span>Start</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+      			    	{% for slide in site.caseslides %}
+        						{% if slide.case == page.case %}
+        							{{slide.output}}
+        						{% endif %}
+        					{% endfor %}
+
+      			    </div>
 
 				 <a class="carousel-control-prev" href="#caseCarousel" role="button" data-slide="prev">
 				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -123,10 +252,35 @@ layout: null
 
 		</div>
     </div>
+
     <script>
     	document.querySelector('.carousel-control-next').focus();
 
+      if(document.location.hash){
+        if(document.location.hash.includes("last")){
+          $('#caseCarousel').carousel({{ lastSlideIndex }})
+        }
+      }
+
+      $('#caseCarousel').on('slide.bs.carousel', '', function(e, data) { 
+        if(e.from == 0 && e.direction == "right")
+        {
+          var caseMain = document.getElementById("main");
+          caseMain.parentNode.removeChild(caseMain);
+          window.location = "{{site.url}}{{site.baseurl}}{{ previousCase.url }}#last";
+          // todo last slide
+        }   
+        if(e.to == 0 && e.direction == "left"){
+          // remove carousel
+          var caseMain = document.getElementById("main");
+          caseMain.parentNode.removeChild(caseMain);
+          window.location = "{{site.url}}{{site.baseurl}}{{ nextCase.url }}";
+        }
+      });
+
     </script>
+
+
       
     {% include analytics.html %}
 
