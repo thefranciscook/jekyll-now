@@ -133,10 +133,30 @@ layout: null
         top: 1rem;
         opacity: .75;
       }
+
+      .btn-circle.btn-xl {
+          width: 50px;
+          height: 50px;
+          padding: 10px 16px;
+          border-radius: 35px;
+          font-size: 24px;
+          line-height: 1.2;
+      }
+
+      .btn-circle {
+          width: 30px;
+          height: 30px;
+          padding: 6px 0px;
+          border-radius: 15px;
+          text-align: center;
+          font-size: 12px;
+          line-height: 1.42857;
+      }
 		
     </style>
 
   </head>
+
 
   {% assign currentIndex = null %}
     {% assign currentCase = null %}
@@ -161,9 +181,26 @@ layout: null
 
     {% endfor %}
 
+
+    {% assign thumbUrl = null %}
+    {% assign coverUrl = null %}
+    {% for image in site.static_files %}
+      {% assign imageLower = image.path | downcase %}
+      {% assign pageLower = page.case | downcase %} 
+      {% if imageLower contains pageLower %}
+        {% if image.path contains 'thumb' %}
+          {% assign thumbUrl = site.baseurl | append: image.path %}
+        {% else %}
+          {% assign coverUrl = site.baseurl | append: image.path %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}  
+
+    
+
   <body>
       <div id="main" role="main" class="d-flex flex-column h-100">
-      	<!--<h1>{{ page.title }}</h1>-->
+
       	<div class="h-100">
 
           <a class="case-close close" aria-label="Close" href="{{site.url}}{{site.baseurl}}">
@@ -172,27 +209,16 @@ layout: null
 
           	<div id="caseCarousel" class="carousel h-100" data-ride="carousel" data-interval="false">
 
-              <div class="case-info">
-                {% for image in site.static_files %}
-                  {% assign imageLower = image.path | downcase %}
-                  {% assign pageLower = page.case | downcase %}
-                  {% assign thumbUrl = null %}
-                  {% if imageLower contains pageLower and image.path contains 'thumb' %}
-                      {% assign thumbUrl = site.baseurl | append: image.path %}
-                  {% break %} 
-                  {% endif %}
-                {% endfor %}  
-
-                <div class="media">
-                  <img class="mr-1" src="{{thumbUrl}}" style="width: 1rem; height: 1rem; object-fit: cover;" alt="Generic placeholder image">
-                  <div class="media-body">
-                    <p class="small">{{page.title}}</p>
+              <div id="caseHeader">
+                <div class="case-info">
+                  <div class="media">
+                    <img class="mr-1" src="{{thumbUrl}}" style="width: 1rem; height: 1rem; object-fit: cover;" alt="Generic placeholder image">
+                    <div class="media-body">
+                      <p class="small">{{page.title}}</p>
+                    </div>
                   </div>
+
                 </div>
-
-              </div>
-
-                
 
                 <ol class="carousel-indicators">
                   <li data-target="#caseCarousel" data-slide-to="0" class="active"></li>
@@ -225,48 +251,96 @@ layout: null
                   {% endif %}
                   {% assign lastSlideIndex = caseSlideIndex | minus: 1 %}
                 </ol>
+              </div>
 
                 
 
-      			    <div class="carousel-inner h-100">
+    			    <div class="carousel-inner h-100">
 
-                  <!-- case title slide -->
-                  <div class="carousel-item h-100 active">
+                <!-- case title slide -->
+                <div class="carousel-item h-100 active">
+                  <div class="d-flex text-dark h-100">
+                    <div class="align-self-center flex-column d-flex w-100" >
+                        <div class="align-self-center">
+                          <div class="title-box p-3 d-flex flex-column ">
+                            <img class="img-fluid mb-2" src="{{coverUrl}}"></img>
+                            <h5 class="text-uppercase">{{page.title}}</h5>
+                            <p style="font-weight: 200">{{ page.excerpt }}</p>
+                            <a class="btn btn-primary btn-circle btn-xl mt-3 align-self-end" href="#caseCarousel" role="button" data-slide="next">
+                                <span><svg style="max-width: 100%; max-height: 100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" width="512px" height="512px">
+<path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z" fill="#FFFFFF"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg></span>
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="title-box p-3">
+                      <img src="{{coverUrl}}"></img>
+                      <h3 class="text-uppercase">{{page.title}}</h3>
+                      <p>{{ page.excerpt }}</p>
+                      <a class="btn btn-primary mt-3 pl-5 pr-5" href="#caseCarousel" role="button" data-slide="next">
+                          <span>Start</span>
+                      </a>
+                    </div>-->
+
+                  </div>
+                </div>
+
+    			    	{% for slide in site.caseslides %}
+      						{% if slide.case == page.case %}
+      							{{slide.output}}
+      						{% endif %}
+      					{% endfor %}
+
+                <!-- TODO if cta, than cta slide -->
+                {% if page.cta %}
+                  <div class="carousel-item h-100">
                     <div class="d-flex h-100 v-100 text-dark justify-content-center ">
                       <div class="title-box d-flex flex-column justify-content-center align-self-center p-3">
-                        <h3 class="align-self-center text-uppercase">{{page.title}}</h3>
-                        <p>{{ page.excerpt }}</p>
-                        <a class="btn btn-primary align-self-center mt-3 pl-5 pr-5" href="#caseCarousel" role="button" data-slide="next">
-                            <span>Start</span>
+                        <a class=" align-self-center mt-3" style="width: 50%; height: 50%;"  href="{{page.cta.link}}" target="_blank" >
+                          <img src="{{thumbUrl}}" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+
+                        <a class="btn btn-primary align-self-center mt-3 pl-5 pr-5" href="{{page.cta.link}}" role="button" target="_blank" >
+                            <span>{{page.cta.label}}</span>
                         </a>
                       </div>
                     </div>
                   </div>
+                {% endif %}
 
-      			    	{% for slide in site.caseslides %}
-        						{% if slide.case == page.case %}
-        							{{slide.output}}
-        						{% endif %}
-        					{% endfor %}
-
-                  <!-- TODO if cta, tah cta slide -->
-                  {% if page.cta %}
-                    <div class="carousel-item h-100">
-                      <div class="d-flex h-100 v-100 text-dark justify-content-center ">
-                        <div class="title-box d-flex flex-column justify-content-center align-self-center p-3">
-                          <a class=" align-self-center mt-3" style="width: 50%; height: 50%;"  href="{{page.cta.link}}" target="_blank" >
-                            <img src="{{thumbUrl}}" style="width: 100%; height: 100%; object-fit: cover;">
-                          </a>
-
-                          <a class="btn btn-primary align-self-center mt-3 pl-5 pr-5" href="{{page.cta.link}}" role="button" target="_blank" >
-                              <span>{{page.cta.label}}</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  {% endif %}
-
-      			    </div>
+    			    </div>
 
 				 <a class="carousel-control-prev" href="#caseCarousel" role="button" data-slide="prev">
 				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
