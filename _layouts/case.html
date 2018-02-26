@@ -153,7 +153,10 @@ layout: null
           line-height: 1.42857;
       }
 		
+
     </style>
+
+    
 
   </head>
 
@@ -199,66 +202,74 @@ layout: null
     
 
   <body>
-      <div id="main" role="main" class="d-flex flex-column h-100">
+      <div id="main" role="main" class="h-100">
 
-      	<div class="h-100">
+          	<div id="caseCarousel" class="carousel h-100 " data-ride="carousel" data-interval="false">
 
-          <a class="case-close close" aria-label="Close" href="{{site.url}}{{site.baseurl}}">
-            <span aria-hidden="true">&times;</span>
-          </a>
-
-          	<div id="caseCarousel" class="carousel h-100" data-ride="carousel" data-interval="false">
-
-              <div id="caseHeader">
-                <div class="case-info">
-                  <div class="media">
-                    <img class="mr-1" src="{{thumbUrl}}" style="width: 1rem; height: 1rem; object-fit: cover;" alt="Generic placeholder image">
+              <div id="caseHeader" class="d-flex flex-column">
+                <div id="caseProgressIndicator" class="p-1">
+                  <ol class="carousel-indicators">
+                      <li data-target="#caseCarousel" data-slide-to="0" class="active"></li>
+                      {% assign caseSlideIndex = 1 %}
+                      {% for slide in site.caseslides %}
+                        {% if slide.case == page.case %}
+                          {% if slide.layout == "caseslide-emojisteps" %}
+                            {% assign emojisteps = slide.content | split: '(BLOCK)' | size %}
+                              {% for emojistep in (1..emojisteps) %}
+                                <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
+                                {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
+                              {% endfor %}
+                          {% else %}
+                            {% if slide.layout == "caseslide-steps" %}
+                              {% assign total_paragraphs = slide.content | newline_to_br | split: '<br />' | size | minus: 1 %}
+                              {% for paragraphIndex in (1..total_paragraphs) %}
+                                <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
+                                {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
+                              {% endfor %}
+                            {% else %}
+                              <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
+                              {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
+                            {% endif %}
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                      {% if page.cta %}
+                        <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
+                        {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
+                      {% endif %}
+                      {% assign lastSlideIndex = caseSlideIndex | minus: 1 %}
+                    </ol>
+                </div>
+                <div class="d-flex mt-2">
+                  <div id="caseTitle" class="media pl-2" >
+                    <img class="mr-1" src="{{thumbUrl}}" style="width: 1rem; height: 1rem; object-fit: cover;">
                     <div class="media-body">
-                      <p class="small">{{page.title}}</p>
+                      <p class="small m-0 p-0">{{page.title}}</p>
                     </div>
                   </div>
-
+                  <div class="ml-auto mr-3">
+                    <a class="close" aria-label="Close" href="{{site.url}}{{site.baseurl}}">
+                      <span aria-hidden="true">&times;</span>
+                    </a>
+                  </div>
                 </div>
-
-                <ol class="carousel-indicators">
-                  <li data-target="#caseCarousel" data-slide-to="0" class="active"></li>
-                  {% assign caseSlideIndex = 1 %}
-                  {% for slide in site.caseslides %}
-                    {% if slide.case == page.case %}
-                      {% if slide.layout == "caseslide-emojisteps" %}
-                        {% assign emojisteps = slide.content | split: '(BLOCK)' | size %}
-                          {% for emojistep in (1..emojisteps) %}
-                            <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
-                            {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
-                          {% endfor %}
-                      {% else %}
-                        {% if slide.layout == "caseslide-steps" %}
-                          {% assign total_paragraphs = slide.content | newline_to_br | split: '<br />' | size | minus: 1 %}
-                          {% for paragraphIndex in (1..total_paragraphs) %}
-                            <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
-                            {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
-                          {% endfor %}
-                        {% else %}
-                          <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
-                          {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
-                        {% endif %}
-                      {% endif %}
-                    {% endif %}
-                  {% endfor %}
-                  {% if page.cta %}
-                    <li data-target="#caseCarousel" data-slide-to="{{ caseSlideIndex }}"></li>
-                    {% assign caseSlideIndex = caseSlideIndex | plus: 1 %}
-                  {% endif %}
-                  {% assign lastSlideIndex = caseSlideIndex | minus: 1 %}
-                </ol>
               </div>
 
                 
 
-    			    <div class="carousel-inner h-100 mt-5">
+    			    <div class="carousel-inner h-100">
+              <!--
+                <div class="carousel-item h-100 active" style="background-color: red">
+                  
+                  <div id="caseSlideContent" class="d-flex flex-column">
+                    <img class="img-fluid mb-2" src="{{coverUrl}}"></img>
+                    <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). </p>
+                    <h1>YO</h1>
+                  </div>
+                
+                </div>-->
 
-                <!-- case title slide -->
-                <div class="carousel-item h-100 active">
+                <div id="caseTitleSlide" class="carousel-item h-100 active"> 
                   <div class="d-flex text-dark h-100">
                     <div class="align-self-center flex-column d-flex w-100" >
                         <div class="align-self-center">
@@ -266,7 +277,7 @@ layout: null
                             <img class="img-fluid mb-2" src="{{coverUrl}}"></img>
                             <h5 class="text-uppercase">{{page.title}}</h5>
                             <p style="font-weight: 200">{{ page.excerpt }}</p>
-                            <a class="btn btn-primary btn-circle btn-xl mt-3 align-self-end" href="#caseCarousel" role="button" data-slide="next">
+                            <a class="btn btn-primary btn-circle btn-xl mt-0 align-self-end" href="#caseCarousel" role="button" data-slide="next">
                                 <span><svg style="max-width: 100%; max-height: 100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" width="512px" height="512px">
                                   <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z" fill="#FFFFFF"/>
                                   </svg></span>
@@ -314,7 +325,6 @@ layout: null
 			</div>
 
 		</div>
-    </div>
 
     <script>
     	document.querySelector('.carousel-control-next').focus();
@@ -341,6 +351,30 @@ layout: null
         }
       });
 
+    </script>
+
+    <script type="text/javascript">
+
+      var caseTitle = $('#caseTitle');
+      var caseTitleSlide = $('#caseTitleSlide');
+
+      var checkForTitleSlide = function(){
+        if(caseTitleSlide && caseTitle){
+          if(caseTitleSlide.is(':visible')){
+            caseTitle.hide();
+          }
+          else{
+            caseTitle.show();
+          }
+        }
+
+      };
+
+      checkForTitleSlide();
+
+      $('#caseCarousel').on('slid.bs.carousel', '', function(e, data) { 
+        checkForTitleSlide();
+      });
     </script>
 
 
