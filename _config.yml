@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: Francis Cook
+name: Francis Szakacs
 
 # Short bio or description (displayed in the header)
 description: Strategic Designer in Toronto
@@ -18,15 +18,15 @@ avatar: https://pbs.twimg.com/profile_images/930734817083355138/wxQgywnG_400x400
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: hello@franciscook.com
-  facebook: thefranciscook
+  email: ping@francis.systems
+  facebook: francisszakacs
   flickr:
   github: thefranciscook
-  instagram: thefranciscook
-  linkedin: thefranciscook
+  instagram: francis_systems
+  linkedin: francis_szakacs
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: thefranciscook
+  twitter: francis_systems
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
